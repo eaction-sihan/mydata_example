@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/details_controller.dart';
-import 'package:getx_pattern/app/ui/pages/widgets/loading_widget.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/widgets/loading_widget.dart';
+
 
 class DetailsPage extends StatelessWidget {
   @override

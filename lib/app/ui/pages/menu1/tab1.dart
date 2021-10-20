@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/home_controller.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1_1.dart';
 import 'package:getx_pattern/app/ui/widgets/app_bar1.dart';
-import 'package:getx_pattern/app/ui/widgets/left_menu1.dart';
+import 'package:getx_pattern/app/ui/widgets/left_menu.dart';
 
 class Tab1 extends StatelessWidget {
   @override

@@ -4,7 +4,7 @@ import 'package:getx_pattern/app/controller/home_controller.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1.dart';
 import 'package:getx_pattern/app/ui/widgets/app_bar1.dart';
 import 'package:getx_pattern/app/ui/widgets/bottom_bar.dart';
-import 'package:getx_pattern/app/ui/widgets/left_menu1.dart';
+import 'package:getx_pattern/app/ui/widgets/left_menu.dart';
 
 import 'details.dart';
 

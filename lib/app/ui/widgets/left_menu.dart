@@ -17,8 +17,8 @@ class LeftMenu1 extends StatelessWidget {
               backgroundColor: Colors.white,
             ),
 
-            accountName: Text('GANGPRO'),
-            accountEmail: Text('gangpro@email.com'),
+            accountName: Text('한승일'),
+            accountEmail: Text('sihan@email.com'),
             onDetailsPressed: () {
               print('arrow is clicked');
             },

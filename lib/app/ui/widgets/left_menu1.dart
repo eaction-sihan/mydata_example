@@ -1,0 +1,69 @@
+import 'package:flutter/material.dart';
+
+class LeftMenu1 extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          // 프로젝트에 assets 폴더 생성 후 이미지 2개 넣기
+          // pubspec.yaml 파일에 assets 주석에 이미지 추가하기
+          UserAccountsDrawerHeader(
+            currentAccountPicture: CircleAvatar(
+              // 현재 계정 이미지 set
+              backgroundImage: AssetImage('assets/profile.png'),
+              backgroundColor: Colors.white,
+            ),
+
+            accountName: Text('GANGPRO'),
+            accountEmail: Text('gangpro@email.com'),
+            onDetailsPressed: () {
+              print('arrow is clicked');
+            },
+            decoration: BoxDecoration(
+                color: Colors.purple,
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(40.0),
+                    bottomRight: Radius.circular(40.0))),
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.home,
+              color: Colors.grey[850],
+            ),
+            title: Text('Home'),
+            onTap: () {
+              print('Home is clicked');
+            },
+            trailing: Icon(Icons.add),
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.settings,
+              color: Colors.grey[850],
+            ),
+            title: Text('Setting'),
+            onTap: () {
+              print('Setting is clicked');
+            },
+            trailing: Icon(Icons.add),
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.question_answer,
+              color: Colors.grey[850],
+            ),
+            title: Text('Q&A'),
+            onTap: () {
+              print('Q&A is clicked');
+            },
+            trailing: Icon(Icons.add),
+          ),
+        ],
+      ),
+    );
+  }
+
+}

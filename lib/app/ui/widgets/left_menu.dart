@@ -16,7 +16,6 @@ class LeftMenu1 extends StatelessWidget {
               backgroundImage: AssetImage('assets/profile.png'),
               backgroundColor: Colors.white,
             ),
-
             accountName: Text('한승일'),
             accountEmail: Text('sihan@email.com'),
             onDetailsPressed: () {
@@ -26,7 +25,9 @@ class LeftMenu1 extends StatelessWidget {
                 color: Colors.purple,
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(40.0),
-                    bottomRight: Radius.circular(40.0))),
+                    bottomRight: Radius.circular(40.0)
+                )
+            ),
           ),
           ListTile(
             leading: Icon(

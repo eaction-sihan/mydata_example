@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/home_controller.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1_1.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab1_2.dart';
 import 'package:getx_pattern/app/ui/widgets/app_bar1.dart';
 import 'package:getx_pattern/app/ui/widgets/left_menu.dart';
 
@@ -22,11 +23,7 @@ class Tab1 extends StatelessWidget {
         body: TabBarView(
           children: [
             Tab1_1(),
-            Container(
-              child: Center(
-                child: Text('2'),
-              ),
-            ),
+            Tab1_2(),
             Container(
               child: Center(
                 child: Text('3'),

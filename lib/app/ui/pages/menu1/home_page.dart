@@ -6,6 +6,8 @@ import 'package:getx_pattern/app/ui/widgets/app_bar1.dart';
 import 'package:getx_pattern/app/ui/widgets/bottom_bar.dart';
 import 'package:getx_pattern/app/ui/widgets/left_menu1.dart';
 
+import 'details_page.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,11 +15,6 @@ class HomePage extends StatelessWidget {
     final HomeController c = Get.put(HomeController());
 
     return Scaffold(
-        // count가 변경 될 때마다 Obx(()=> 를 사용하여 Text()에 업데이트합니다.
-        appBar: AppBar1(),
-        drawer: LeftMenu1(),
-
-        // 8줄의 Navigator.push를 간단한 Get.to()로 변경합니다. context는 필요없습니다.
         body: DefaultTabController(
           length: 4,
           child: Scaffold(
@@ -26,11 +23,7 @@ class HomePage extends StatelessWidget {
                 //physics: NeverScrollableScrollPhysics(),
                 children: <Widget>[
                   Tab1(),
-                  Container(
-                    child: Center(
-                      child: Text('search'),
-                    ),
-                  ),
+                  DetailsPage(),
                   Container(
                     child: Center(
                       child: Text('save'),
@@ -44,11 +37,11 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            bottomNavigationBar: Botttom(),
+            bottomNavigationBar: BottomBar(),
           ),
         ),
         floatingActionButton: Padding(
-            padding: const EdgeInsets.only(bottom: 50.0),
+            padding: const EdgeInsets.only(bottom: 65.0),
             child: FloatingActionButton(
                 child: Icon(Icons.add), onPressed: c.increment)));
   }

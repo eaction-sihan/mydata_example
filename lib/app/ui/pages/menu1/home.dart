@@ -6,7 +6,7 @@ import 'package:getx_pattern/app/ui/widgets/app_bar1.dart';
 import 'package:getx_pattern/app/ui/widgets/bottom_bar.dart';
 import 'package:getx_pattern/app/ui/widgets/left_menu1.dart';
 
-import 'details_page.dart';
+import 'details.dart';
 
 class HomePage extends StatelessWidget {
   @override

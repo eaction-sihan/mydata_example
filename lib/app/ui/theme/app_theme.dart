@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-const fPrimaryColor = Color(0xFF5f0088);
-const fSecondaryColor = Color(0xFF979797);
+const fPrimaryColor = Color(0XFF5C3CDD);
+const fSecondaryColor = Color(0XFF5C3CDD);
 const fTextColor = Color(0xFF757575);
 
 final ThemeData appThemeData = ThemeData(
@@ -10,7 +10,10 @@ final ThemeData appThemeData = ThemeData(
   splashColor: fSecondaryColor,
   highlightColor: fPrimaryColor,
   appBarTheme: AppBarTheme(
-    color: fPrimaryColor,
+    color: Colors.white,
+    iconTheme: IconThemeData(
+        color: fPrimaryColor
+    ),
   ),
   fontFamily: 'Georgia',
   textTheme: TextTheme(

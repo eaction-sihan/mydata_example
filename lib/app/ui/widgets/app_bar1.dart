@@ -10,25 +10,31 @@ class AppBar1 extends StatelessWidget with PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      // count가 변경 될 때마다 Obx(()=> 를 사용하여 Text()에 업데이트합니다.
-      title: Obx(() => Text("Clicks: ${c.count1}")),
-      centerTitle: true,
-      actions: <Widget>[
-        IconButton(
-          icon: Icon(Icons.search), // 검색 아이콘 생성
-          onPressed: () {
-            // 아이콘 버튼 실행
-            print('Search button is clicked');
-          },
-        ),
-        NamedIcon(
-          iconData: Icons.mail,
-          notificationCount: 1,
-          onTap: () {},
-        ),
-      ],
-      bottom: TopMenu()
+    return Container(
+      decoration: BoxDecoration(
+          border: Border(bottom: BorderSide(width: 0.3, color: Colors.grey)),
+          color: Colors.white),
+      child: AppBar(
+          // count가 변경 될 때마다 Obx(()=> 를 사용하여 Text()에 업데이트합니다.
+          title: Obx(() =>
+              Text("Clicks: ${c.count1}", style: TextStyle(color: Colors.black))),
+          centerTitle: true,
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search), // 검색 아이콘 생성
+              onPressed: () {
+                // 아이콘 버튼 실행
+                print('Search button is clicked');
+              },
+            ),
+            NamedIcon(
+              iconData: Icons.notifications_none ,
+              notificationCount: 1,
+              onTap: () {},
+            ),
+          ],
+          bottom: TopMenu()
+      ),
     );
   }
 

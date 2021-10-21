@@ -27,12 +27,12 @@ class NamedIcon extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Icon(iconData),
+                  Icon(iconData, size: 26),
                 ],
               ),
               Positioned(
-                top: 3,
-                right: 3,
+                top: 4,
+                right: 8,
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                   decoration:

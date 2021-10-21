@@ -4,6 +4,7 @@ import 'package:getx_pattern/app/controller/home_controller.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1_1.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1_2.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1_3.dart';
+import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:getx_pattern/app/ui/widgets/top_menu.dart';
 
 class Tab1 extends StatelessWidget {
@@ -27,7 +28,7 @@ class Tab1 extends StatelessWidget {
                 color: Colors.white),
             child: Text(
               'Agenda',
-              style: TextStyle(color: Colors.black, fontSize: 22),
+              style: textTheme().headline1,
             ),
           ),
           TopMenu(categories: categories),

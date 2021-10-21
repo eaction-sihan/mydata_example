@@ -25,8 +25,9 @@ class TopMenu extends StatelessWidget with PreferredSizeWidget {
             text: categories[index],
           ),
         ),
+        isScrollable: true,
         labelColor: fPrimaryColor,
-        labelStyle: TextStyle(fontWeight: FontWeight.bold),
+        labelStyle: textTheme().subtitle2,
         unselectedLabelColor: Colors.black45,
         // labelStyle: textTheme()
         //     .headline2

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/home_controller.dart';
+import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:getx_pattern/app/ui/widgets/top_menu.dart';
 import 'badge_icon.dart';
 
@@ -17,7 +18,7 @@ class AppBar1 extends StatelessWidget with PreferredSizeWidget {
       child: AppBar(
           // count가 변경 될 때마다 Obx(()=> 를 사용하여 Text()에 업데이트합니다.
           title: Obx(() =>
-              Text("HOME ${c.count1}", style: TextStyle(color: Colors.black, ))),
+              Text("HOME ${c.count1}", style: textTheme().headline1)),
           centerTitle: true,
           actions: <Widget>[
             IconButton(

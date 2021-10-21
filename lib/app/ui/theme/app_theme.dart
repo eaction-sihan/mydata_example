@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 const fPrimaryColor = Color(0XFF5C3CDD);
 const fSecondaryColor = Color(0XFF5C3CDD);
-const fTextColor = Color(0xFF757575);
+const fTextColor = Color(0xFF353535);
 
 final ThemeData appThemeData = ThemeData(
   primaryColor: fPrimaryColor,
@@ -26,12 +26,14 @@ final ThemeData appThemeData = ThemeData(
 TextTheme textTheme() {
   return TextTheme(
     headline1:
-    GoogleFonts.nanumGothic(fontSize: 18.0, fontWeight: FontWeight.bold),
+    GoogleFonts.nanumGothic(fontSize: 18.0, fontWeight: FontWeight.bold, color: fTextColor),
     headline2:
-    GoogleFonts.nanumGothic(fontSize: 16.0, fontWeight: FontWeight.bold),
-    subtitle1: GoogleFonts.nanumGothic(fontSize: 16.0),
-    bodyText1: GoogleFonts.nanumGothic(fontSize: 15.0),
-    bodyText2: GoogleFonts.nanumGothic(fontSize: 14.0),
+    GoogleFonts.nanumGothic(fontSize: 16.0, fontWeight: FontWeight.bold, color: fTextColor),
+    subtitle1: GoogleFonts.nanumGothic(fontSize: 16.0, color: fTextColor),
+    subtitle2: GoogleFonts.nanumGothic(fontSize: 14.0, color: fTextColor, fontWeight: FontWeight.bold),
+    bodyText1: GoogleFonts.nanumGothic(fontSize: 15.0, color: fTextColor),
+    bodyText2: GoogleFonts.nanumGothic(fontSize: 14.0, color: fTextColor),
+
   );
 }
 

@@ -17,7 +17,7 @@ class AppBar1 extends StatelessWidget with PreferredSizeWidget {
       child: AppBar(
           // count가 변경 될 때마다 Obx(()=> 를 사용하여 Text()에 업데이트합니다.
           title: Obx(() =>
-              Text("Clicks: ${c.count1}", style: TextStyle(color: Colors.black))),
+              Text("HOME ${c.count1}", style: TextStyle(color: Colors.black, ))),
           centerTitle: true,
           actions: <Widget>[
             IconButton(
@@ -33,12 +33,12 @@ class AppBar1 extends StatelessWidget with PreferredSizeWidget {
               onTap: () {},
             ),
           ],
-          bottom: TopMenu()
+          //bottom: TopMenu()
       ),
     );
   }
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(kToolbarHeight + 42);
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }

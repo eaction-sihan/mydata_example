@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/home_controller.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab2.dart';
 import 'package:getx_pattern/app/ui/widgets/app_bar1.dart';
 import 'package:getx_pattern/app/ui/widgets/bottom_bar.dart';
 import 'package:getx_pattern/app/ui/widgets/left_menu.dart';
@@ -15,17 +16,20 @@ class HomePage extends StatelessWidget {
     final HomeController c = Get.put(HomeController());
 
     return Scaffold(
-        body: GetBuilder<HomeController>(
-          builder: (_) {
-            return DefaultTabController(
-              length: 4,
-              child: Scaffold(
+      appBar: AppBar1(),
+      drawer: LeftMenu1(),
+      body: GetBuilder<HomeController>(
+        builder: (_) {
+          return DefaultTabController(
+            length: 4,
+            child: Scaffold(
+                backgroundColor: Colors.white,
                 body: SafeArea(
                   child: IndexedStack(
                     index: c.tabIndex,
                     children: <Widget>[
                       Tab1(),
-                      DetailsPage(),
+                      Tab2(),
                       Container(
                         child: Center(
                           child: Text('save'),
@@ -40,13 +44,13 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 bottomNavigationBar: BottomBar(),
-              ),
-            );
-          },
-        ),
-        floatingActionButton: Padding(
-            padding: const EdgeInsets.only(bottom: 50.0),
-            child: FloatingActionButton(
-                child: Icon(Icons.add), onPressed: c.increment)));
+                floatingActionButton: Padding(
+                    padding: const EdgeInsets.only(),
+                    child: FloatingActionButton(
+                        child: Icon(Icons.add), onPressed: c.increment))),
+          );
+        },
+      ),
+    );
   }
 }

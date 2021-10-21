@@ -3,15 +3,20 @@ import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:getx_pattern/app/ui/widgets/point_tab_indicator.dart';
 
 class TopMenu extends StatelessWidget with PreferredSizeWidget {
-  List<String> categories = ["추천", "신상품", "금주혜택", "알뜰쇼핑"];
+  List<String> categories;
+
+  TopMenu({
+    Key? key,
+    required this.categories,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(top: 10),
       decoration: BoxDecoration(
-          border: Border(
-              top: BorderSide(width: 2, color: Colors.black12),
-              bottom: BorderSide(width: 0.3, color: Colors.grey)),
+          // border: Border(
+          //     bottom: BorderSide(width: 0.3, color: Colors.grey)),
           color: Colors.white),
       child: TabBar(
         tabs: List.generate(
@@ -29,7 +34,7 @@ class TopMenu extends StatelessWidget with PreferredSizeWidget {
         indicator: PointTabIndicator(
           position: PointTabIndicatorPosition.top,
           color: fPrimaryColor,
-          insets: EdgeInsets.only(top: 5),
+          insets: EdgeInsets.only(top: 4),
         ),
       ),
     );

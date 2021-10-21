@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:getx_pattern/app/ui/pages/menu1/widgets/bottom_modal.dart';
-import 'package:getx_pattern/app/ui/pages/menu1/widgets/button_widget.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
@@ -19,9 +16,6 @@ class Tab1_2 extends StatelessWidget {
     ];
 
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Syncfusion Flutter chart'),
-        ),
         body: Column(children: [
           //Initialize the chart widget
           SfCartesianChart(

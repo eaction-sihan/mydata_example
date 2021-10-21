@@ -12,23 +12,7 @@ class Tab1_1 extends StatelessWidget {
       padding: EdgeInsets.all(100),
       child: Column(
         children: [
-          RaisedButtonCustomWidget(
-            icon: Icons.list,
-            text: "oi",
-            onPressed: () => Get.to(DetailsPage()),
-            borderColor: Colors.purple,
-          ),
-          ElevatedButton(
-            child: const Text('showModalBottomSheet'),
-            onPressed: () {
-              showModalBottomSheet<void>(
-                context: context,
-                builder: (BuildContext context) {
-                  return BottomModal();
-                },
-              );
-            },
-          ),
+
         ],
       ),
     );

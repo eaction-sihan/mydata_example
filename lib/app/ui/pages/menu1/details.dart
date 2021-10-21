@@ -33,7 +33,7 @@ class DetailsPage extends StatelessWidget {
                         trailing: Icon(Icons.arrow_forward_outlined),
                         onTap: () => Get.defaultDialog(
                           title: c.postList[index].title,
-                          radius: 5.0,
+                          radius: 15.0,
                           middleText: c.postList[index].body,
                           actions: [
                             ElevatedButton(

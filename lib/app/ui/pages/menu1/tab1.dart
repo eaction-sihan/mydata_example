@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/home_controller.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1_1.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1_2.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab1_3.dart';
 import 'package:getx_pattern/app/ui/widgets/app_bar1.dart';
 import 'package:getx_pattern/app/ui/widgets/left_menu.dart';
 
@@ -24,11 +25,7 @@ class Tab1 extends StatelessWidget {
           children: [
             Tab1_1(),
             Tab1_2(),
-            Container(
-              child: Center(
-                child: Text('3'),
-              ),
-            ),
+            Tab1_3(),
             Container(
               child: Center(
                 child: Text('4'),

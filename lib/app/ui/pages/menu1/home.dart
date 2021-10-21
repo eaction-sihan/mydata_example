@@ -15,33 +15,37 @@ class HomePage extends StatelessWidget {
     final HomeController c = Get.put(HomeController());
 
     return Scaffold(
-        body: DefaultTabController(
-          length: 4,
-          child: Scaffold(
-            body: SafeArea(
-              child: TabBarView(
-                //physics: NeverScrollableScrollPhysics(),
-                children: <Widget>[
-                  Tab1(),
-                  DetailsPage(),
-                  Container(
-                    child: Center(
-                      child: Text('save'),
-                    ),
+        body: GetBuilder<HomeController>(
+          builder: (_) {
+            return DefaultTabController(
+              length: 4,
+              child: Scaffold(
+                body: SafeArea(
+                  child: IndexedStack(
+                    index: c.tabIndex,
+                    children: <Widget>[
+                      Tab1(),
+                      DetailsPage(),
+                      Container(
+                        child: Center(
+                          child: Text('save'),
+                        ),
+                      ),
+                      Container(
+                        child: Center(
+                          child: Text('more'),
+                        ),
+                      ),
+                    ],
                   ),
-                  Container(
-                    child: Center(
-                      child: Text('more'),
-                    ),
-                  ),
-                ],
+                ),
+                bottomNavigationBar: BottomBar(),
               ),
-            ),
-            bottomNavigationBar: BottomBar(),
-          ),
+            );
+          },
         ),
         floatingActionButton: Padding(
-            padding: const EdgeInsets.only(bottom: 65.0),
+            padding: const EdgeInsets.only(bottom: 50.0),
             child: FloatingActionButton(
                 child: Icon(Icons.add), onPressed: c.increment)));
   }

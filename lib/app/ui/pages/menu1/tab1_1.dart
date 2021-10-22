@@ -221,7 +221,7 @@ class Tab1_1 extends StatelessWidget {
                 Icon(
                   FontAwesomeIcons.star,
                   color: fTextColor,
-                  size: 18,
+                  size: 16,
                 ),
               ]
           ),
@@ -230,7 +230,7 @@ class Tab1_1 extends StatelessWidget {
                 Icon(
                   FontAwesomeIcons.comment,
                   color: fTextColor,
-                  size: 18,
+                  size: 16,
                 ),
                 SizedBox(width: 5),
                 Text(
@@ -244,7 +244,7 @@ class Tab1_1 extends StatelessWidget {
                 Icon(
                   FontAwesomeIcons.heart,
                   color: fTextColor,
-                  size: 18,
+                  size: 16,
                 ),
                 SizedBox(width: 5),
                 Text(
@@ -258,7 +258,7 @@ class Tab1_1 extends StatelessWidget {
                 Icon(
                   FontAwesomeIcons.shareAlt,
                   color: fTextColor,
-                  size: 18,
+                  size: 16,
                 ),
               ]
           ),
@@ -267,7 +267,7 @@ class Tab1_1 extends StatelessWidget {
                 Icon(
                   FontAwesomeIcons.userCircle,
                   color: fTextColor,
-                  size: 18,
+                  size: 16,
                 ),
                 SizedBox(width: 5),
                 Text(

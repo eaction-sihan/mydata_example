@@ -135,7 +135,7 @@ class Tab1_1 extends StatelessWidget {
   Padding _buildWriter(index) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        vertical: 10,
+        vertical: 9,
         horizontal: 16,
       ),
       child: Row(

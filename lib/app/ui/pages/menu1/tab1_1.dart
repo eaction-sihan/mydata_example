@@ -258,7 +258,7 @@ class Tab1_1 extends StatelessWidget {
                 Icon(
                   Icons.share_outlined,
                   color: fTextColor,
-                  size: 18,
+                  size: 20,
                 ),
               ]
           ),

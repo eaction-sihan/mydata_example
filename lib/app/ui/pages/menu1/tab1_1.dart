@@ -5,6 +5,7 @@ import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:getx_pattern/app/ui/widgets/image_container.dart';
 import 'package:getx_pattern/app/ui/widgets/last_list_btn.dart';
 import 'package:getx_pattern/app/ui/widgets/loading_widget.dart';
+import 'package:getx_pattern/app/ui/widgets/round_box.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'controller/menu1_controller.dart';
@@ -14,47 +15,46 @@ class Tab1_1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: GetBuilder<Menu1Controller>(builder: (_) {
-          return Padding(
-            padding: const EdgeInsets.only(bottom: 2.0),
-            child: ListView.separated(
-              controller: c.scrollController,
-              itemBuilder: (_, index) {
-                if (index < c.postList.length) {
-                  // 값이 있는 경우
-                  return Container(
-                    child: Column(
-                      children: [
-                        _buildTop(index),
-                        _buildWriting(index),
-                        _buildWriter(index),
-                        _buildImage(index),
-                        // Divider(height: 1, thickness: 1, color: Colors.grey[300]),
-                        _buildTail(c.postList[index].commentCount),
-                      ],
-                    ),
-                  );
-                } else {
-                  // 값이 없는 경우
-                  if (c.hasMore || c.isLoading) {
-                    // 리스트의 끝이 아닌 경우
-                    return LoadingWidget();
-                  } else {
-                    // 리스트의 끝인 경우
-                    return LastListBtn(onPressed:() {c.reload();});
-                  }
-                }
-              },
-              separatorBuilder: (_, index) => Divider(
-                height: 1,
-                thickness: 1,
-                color: Colors.grey[200],
+    return Container(child: GetBuilder<Menu1Controller>(builder: (_) {
+      return ListView.separated(
+        controller: c.scrollController,
+        itemBuilder: (_, index) {
+          if (index < c.postList.length) {
+            // 값이 있는 경우
+            return Container(
+              child: Column(
+                children: [
+                  _buildTop(index),
+                  _buildWriting(index),
+                  _buildType(index),
+                  _buildWriter(index),
+                  _buildImage(index),
+                  // Divider(height: 1, thickness: 1, color: Colors.grey[300]),
+                  _buildTail(c.postList[index].commentCount),
+                ],
               ),
-              itemCount: c.postList.length + 1,
-            ),
-          );
-        }));
+            );
+          } else {
+            // 값이 없는 경우
+            if (c.hasMore || c.isLoading) {
+              // 리스트의 끝이 아닌 경우
+              return LoadingWidget();
+            } else {
+              // 리스트의 끝인 경우
+              return LastListBtn(onPressed: () {
+                c.reload();
+              });
+            }
+          }
+        },
+        separatorBuilder: (_, index) => Divider(
+          height: 1,
+          thickness: 1,
+          color: Colors.grey[200],
+        ),
+        itemCount: c.postList.length + 1,
+      );
+    }));
   }
 
   Padding _buildTop(index) {
@@ -66,31 +66,77 @@ class Tab1_1 extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            padding: EdgeInsets.all(4),
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-              borderRadius: BorderRadius.all(Radius.circular(4)),
-              //color: Color.fromRGBO(247, 247, 247, 1),
+          Row(children: [
+            Icon(
+              FontAwesomeIcons.comment,
+              color: Colors.grey,
+              size: 22,
             ),
-            child: Text(c.postList[index].category,
-                style: GoogleFonts.nanumGothic(
-                    fontSize: 15.0,
-                    color: fTextColor,
-                    fontWeight: FontWeight.bold)),
-          ),
-          Text(
-            c.postList[index].date,
-            style: textTheme().bodyText2,
-          ),
+            Container(
+              padding: EdgeInsets.all(4),
+              child: Text(c.postList[index].category,
+                  style: GoogleFonts.nanumGothic(
+                      fontSize: 15.0,
+                      color: fTextColor,
+                      fontWeight: FontWeight.bold)),
+            ),
+          ]),
         ],
       ),
     );
   }
 
+  Padding _buildWriting(index) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 0),
+      child: Align(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          c.postList[index].content,
+          style: textTheme().bodyText2,
+          maxLines: 3,
+          overflow: TextOverflow.ellipsis,
+          textAlign: TextAlign.start,
+        ),
+      ),
+    );
+  }
+
+  Padding _buildType(index) {
+    return Padding(
+        padding:
+            const EdgeInsets.only(top: 14, bottom: 10, left: 20, right: 24),
+        child:
+            Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: List.generate(
+                          c.postList[index].type.length,
+                          (i) => RoundBox(
+                            title: c.postList[index].type[i],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Text(
+                    c.postList[index].date,
+                    style: GoogleFonts.nanumGothic(fontSize: 12.0, color: fTextColor),
+                  ),
+              ]
+            )
+    );
+  }
+
   Padding _buildWriter(index) {
     return Padding(
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.symmetric(
+        vertical: 10,
+        horizontal: 16,
+      ),
       child: Row(
         children: [
           ImageContainer(
@@ -105,32 +151,16 @@ class Tab1_1 extends StatelessWidget {
                 TextSpan(
                     text: ' ${c.postList[index].userName}',
                     style: textTheme().subtitle2),
-                // TextSpan(
-                //     text: ' ${c.postList[index].location}',
-                //     style: textTheme().bodyText2),
-                // TextSpan(
-                //     text: ' 인증 ${c.postList[index].authCount}회',
-                //     style: textTheme().bodyText2)
+                TextSpan(
+                    text: ' ${c.postList[index].location}',
+                    style: textTheme().bodyText2),
+                TextSpan(
+                    text: ' 인증 ${c.postList[index].authCount}회',
+                    style: textTheme().bodyText2)
               ],
             ),
           )
         ],
-      ),
-    );
-  }
-
-  Padding _buildWriting(index) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 16),
-      child: Align(
-        alignment: Alignment.centerLeft,
-        child: Text(
-          c.postList[index].content,
-          style: textTheme().bodyText2,
-          maxLines: 3,
-          overflow: TextOverflow.ellipsis,
-          textAlign: TextAlign.start,
-        ),
       ),
     );
   }

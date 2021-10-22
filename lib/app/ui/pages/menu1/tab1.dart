@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/home_controller.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1_1.dart';
@@ -21,15 +22,23 @@ class Tab1 extends StatelessWidget {
         children: <Widget>[
           Container(
             alignment: Alignment.centerLeft,
-            padding: EdgeInsets.all(16),
+            padding: EdgeInsets.only(top: 16, bottom: 16, left: 16, right: 16),
             decoration: BoxDecoration(
                 border:
-                    Border(bottom: BorderSide(width: 0.3, color: Colors.grey)),
+                    Border(bottom: BorderSide(width: 0.6, color: Colors.grey)),
                 color: Colors.white),
-            child: Text(
-              'Agenda',
-              style: textTheme().headline1,
-            ),
+            child: Row(children: [
+              Text(
+                'Agenda',
+                style: textTheme().headline1,
+              ),
+              SizedBox(width: 5),
+              Icon(
+                FontAwesomeIcons.chevronCircleDown,
+                color: fPrimaryColor,
+                size: 16,
+              ),
+            ]),
           ),
           TopMenu(categories: categories, isScroll: true),
           Expanded(

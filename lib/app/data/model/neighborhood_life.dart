@@ -8,6 +8,7 @@ class NeighborhoodLife {
   final int commentCount;
   final int authCount;
   final String date;
+  List<String>? type = [];
 
   NeighborhoodLife({
     required this.category,
@@ -19,6 +20,7 @@ class NeighborhoodLife {
     required this.commentCount,
     required this.authCount,
     required this.date,
+    this.type,
   });
 }
 
@@ -38,6 +40,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 11,
     authCount: 3,
     date: '3시간전',
+    type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
     category: '우리동네소식',
@@ -49,6 +52,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 2,
     authCount: 1,
     date: '1일전',
+    type: ['제품', '문화'],
   ),
   NeighborhoodLife(
     category: '분실',
@@ -60,6 +64,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 11,
     authCount: 8,
     date: '1일전',
+    type: ['문화', '사회'],
   ),
   NeighborhoodLife(
     category: '우리동네질문',
@@ -71,6 +76,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 0,
     authCount: 7,
     date: '3일전',
+    type: ['제품'],
   ),
   NeighborhoodLife(
     category: '우리동네질문',
@@ -82,6 +88,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 11,
     authCount: 2,
     date: '5일전',
+    type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
     category: '우리동네질문',
@@ -94,6 +101,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 11,
     authCount: 3,
     date: '3시간전',
+    type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
     category: '우리동네질문',
@@ -106,6 +114,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 11,
     authCount: 3,
     date: '3시간전',
+    type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
     category: '우리동네질문',
@@ -118,6 +127,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 11,
     authCount: 3,
     date: '3시간전',
+    type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
     category: '우리동네질문',
@@ -130,6 +140,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 11,
     authCount: 3,
     date: '3시간전',
+    type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
     category: '우리동네질문',
@@ -142,6 +153,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 11,
     authCount: 3,
     date: '3시간전',
+    type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
     category: '우리동네질문',
@@ -154,6 +166,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 11,
     authCount: 3,
     date: '3시간전',
+    type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
     category: '우리동네질문',
@@ -166,6 +179,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 11,
     authCount: 3,
     date: '3시간전',
+    type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
     category: '우리동네질문',
@@ -178,6 +192,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 11,
     authCount: 3,
     date: '3시간전',
+    type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
     category: '우리동네질문',
@@ -190,6 +205,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 11,
     authCount: 3,
     date: '3시간전',
+    type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
     category: '우리동네질문',
@@ -202,5 +218,6 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     commentCount: 11,
     authCount: 3,
     date: '3시간전',
+    type: ['제품', '문화', '사회'],
   ),
 ];

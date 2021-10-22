@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:getx_pattern/app/ui/theme/app_theme.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LeftMenu1 extends StatelessWidget {
 
@@ -16,13 +18,13 @@ class LeftMenu1 extends StatelessWidget {
               backgroundImage: AssetImage('assets/profile.png'),
               backgroundColor: Colors.white,
             ),
-            accountName: Text('한승일'),
-            accountEmail: Text('sihan@email.com'),
+            accountName: Text('한승일', style: GoogleFonts.nanumGothic(fontSize: 14.0, color: Colors.white)),
+            accountEmail: Text('sihan@email.com', style: GoogleFonts.nanumGothic(fontSize: 14.0, color: Colors.white)),
             onDetailsPressed: () {
               print('arrow is clicked');
             },
             decoration: BoxDecoration(
-                color: Colors.purple,
+                color: fPrimaryColor,
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(40.0),
                     bottomRight: Radius.circular(40.0)
@@ -34,7 +36,7 @@ class LeftMenu1 extends StatelessWidget {
               Icons.home,
               color: Colors.grey[850],
             ),
-            title: Text('Home'),
+            title: Text('Home', style: textTheme().bodyText1,),
             onTap: () {
               print('Home is clicked');
             },
@@ -45,7 +47,7 @@ class LeftMenu1 extends StatelessWidget {
               Icons.settings,
               color: Colors.grey[850],
             ),
-            title: Text('Setting'),
+            title: Text('Setting', style: textTheme().bodyText1,),
             onTap: () {
               print('Setting is clicked');
             },
@@ -56,7 +58,7 @@ class LeftMenu1 extends StatelessWidget {
               Icons.question_answer,
               color: Colors.grey[850],
             ),
-            title: Text('Q&A'),
+            title: Text('Q&A', style: textTheme().bodyText1,),
             onTap: () {
               print('Q&A is clicked');
             },

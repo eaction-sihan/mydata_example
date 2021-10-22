@@ -256,9 +256,9 @@ class Tab1_1 extends StatelessWidget {
           Row(
               children: [
                 Icon(
-                  FontAwesomeIcons.shareAlt,
+                  Icons.share_outlined,
                   color: fTextColor,
-                  size: 16,
+                  size: 18,
                 ),
               ]
           ),

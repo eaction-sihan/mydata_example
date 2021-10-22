@@ -22,7 +22,6 @@ class BottomBar extends StatelessWidget {
         showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
-        elevation: 0,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

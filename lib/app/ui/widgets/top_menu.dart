@@ -4,10 +4,11 @@ import 'package:getx_pattern/app/ui/widgets/point_tab_indicator.dart';
 
 class TopMenu extends StatelessWidget with PreferredSizeWidget {
   List<String> categories;
-
+  bool isScroll = false;
   TopMenu({
     Key? key,
     required this.categories,
+    required this.isScroll
   }) : super(key: key);
 
   @override
@@ -25,7 +26,7 @@ class TopMenu extends StatelessWidget with PreferredSizeWidget {
             text: categories[index],
           ),
         ),
-        isScrollable: true,
+        isScrollable: isScroll,
         labelColor: fPrimaryColor,
         labelStyle: textTheme().subtitle2,
         unselectedLabelColor: Colors.black45,

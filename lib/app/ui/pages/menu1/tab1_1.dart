@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:getx_pattern/app/ui/widgets/image_container.dart';
+import 'package:getx_pattern/app/ui/widgets/last_list_btn.dart';
 import 'package:getx_pattern/app/ui/widgets/loading_widget.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,7 +15,6 @@ class Tab1_1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.all(10),
         child: GetBuilder<Menu1Controller>(builder: (_) {
           return Padding(
             padding: const EdgeInsets.only(bottom: 2.0),
@@ -24,24 +24,13 @@ class Tab1_1 extends StatelessWidget {
                 if (index < c.postList.length) {
                   // 값이 있는 경우
                   return Container(
-                    // decoration: BoxDecoration(
-                    //   color: Colors.white,
-                    //   border: Border(
-                    //     bottom:
-                    //         BorderSide(width: 0.5, color: Color(0xFFD4D5DD)),
-                    //   ),
-                    // ),
                     child: Column(
                       children: [
                         _buildTop(index),
                         _buildWriting(index),
                         _buildWriter(index),
                         _buildImage(index),
-                        // Divider(
-                        //   height: 1,
-                        //   thickness: 1,
-                        //   color: Colors.grey[300],
-                        // ),
+                        // Divider(height: 1, thickness: 1, color: Colors.grey[300]),
                         _buildTail(c.postList[index].commentCount),
                       ],
                     ),
@@ -53,26 +42,15 @@ class Tab1_1 extends StatelessWidget {
                     return LoadingWidget();
                   } else {
                     // 리스트의 끝인 경우
-                    return Container(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Center(
-                        child: Column(
-                          children: [
-                            Text('데이터의 마지막 입니다'),
-                            IconButton(
-                              onPressed: () {
-                                c.reload();
-                              },
-                              icon: Icon(Icons.refresh_outlined),
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
+                    return LastListBtn(onPressed:() {c.reload();});
                   }
                 }
               },
-              separatorBuilder: (_, index) => Divider(),
+              separatorBuilder: (_, index) => Divider(
+                height: 1,
+                thickness: 1,
+                color: Colors.grey[200],
+              ),
               itemCount: c.postList.length + 1,
             ),
           );
@@ -161,7 +139,7 @@ class Tab1_1 extends StatelessWidget {
     return Visibility(
       visible: c.postList[index].contentImgUri != '',
       child: Padding(
-        padding: EdgeInsets.only(left: 16, right: 16, bottom: 16),
+        padding: EdgeInsets.only(left: 16, right: 16),
         child: Image.network(
           c.postList[index].contentImgUri,
           height: 200,

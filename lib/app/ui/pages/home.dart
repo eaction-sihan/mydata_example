@@ -7,8 +7,6 @@ import 'package:getx_pattern/app/ui/widgets/app_bar1.dart';
 import 'package:getx_pattern/app/ui/widgets/bottom_bar.dart';
 import 'package:getx_pattern/app/ui/widgets/left_menu.dart';
 
-import 'details.dart';
-
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -44,10 +42,11 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 bottomNavigationBar: BottomBar(),
-                floatingActionButton: Padding(
-                    padding: const EdgeInsets.only(),
-                    child: FloatingActionButton(
-                        child: Icon(Icons.add), onPressed: c.increment))),
+                floatingActionButton: FloatingActionButton(
+                    child: Icon(Icons.add),
+                    onPressed: c.increment
+                )
+            ),
           );
         },
       ),

@@ -21,7 +21,7 @@ class Tab1 extends StatelessWidget {
         children: <Widget>[
           Container(
             alignment: Alignment.centerLeft,
-            padding: EdgeInsets.all(15),
+            padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
                 border:
                     Border(bottom: BorderSide(width: 0.3, color: Colors.grey)),
@@ -31,7 +31,7 @@ class Tab1 extends StatelessWidget {
               style: textTheme().headline1,
             ),
           ),
-          TopMenu(categories: categories),
+          TopMenu(categories: categories, isScroll: true),
           Expanded(
             child: Container(
               child: TabBarView(children: [

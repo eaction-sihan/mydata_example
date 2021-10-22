@@ -32,7 +32,7 @@ class Tab2 extends StatelessWidget {
               style: textTheme().headline1,
             ),
           ),
-          TopMenu(categories: categories),
+          TopMenu(categories: categories, isScroll: false),
           Expanded(
             child: Container(
               child: TabBarView(children: [

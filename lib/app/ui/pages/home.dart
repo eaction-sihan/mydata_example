@@ -10,46 +10,37 @@ import 'package:getx_pattern/app/ui/widgets/left_menu.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Get.put()을 사용하여 클래스를 인스턴스화하여 모든 "child'에서 사용가능하게 합니다.
-    final HomeController c = Get.put(HomeController());
 
-    return Scaffold(
-      appBar: AppBar1(),
-      drawer: LeftMenu1(),
-      body: GetBuilder<HomeController>(
-        builder: (_) {
-          return DefaultTabController(
-            length: 4,
-            child: Scaffold(
-                backgroundColor: Colors.white,
-                body: SafeArea(
-                  child: IndexedStack(
-                    index: c.tabIndex,
-                    children: <Widget>[
-                      Tab1(),
-                      Tab2(),
-                      Container(
-                        child: Center(
-                          child: Text('save'),
-                        ),
-                      ),
-                      Container(
-                        child: Center(
-                          child: Text('more'),
-                        ),
-                      ),
-                    ],
+    return GetBuilder<HomeController>(
+      init: HomeController(),
+      builder: (_) {
+        return Scaffold(
+            appBar: AppBar1(),
+            drawer: LeftMenu1(),
+            backgroundColor: Colors.white,
+            body: SafeArea(
+              child: IndexedStack(
+                index: _.tabIndex,
+                children: <Widget>[
+                  Tab1(),
+                  Tab2(),
+                  Container(
+                    child: Center(
+                      child: Text('save'),
+                    ),
                   ),
-                ),
-                bottomNavigationBar: BottomBar(),
-                floatingActionButton: FloatingActionButton(
-                    child: Icon(Icons.add),
-                    onPressed: c.increment
-                )
+                  Container(
+                    child: Center(
+                      child: Text('more'),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          );
-        },
-      ),
+            bottomNavigationBar: BottomBar(),
+            floatingActionButton: FloatingActionButton(
+                child: Icon(Icons.add), onPressed: _.increment));
+      },
     );
   }
 }

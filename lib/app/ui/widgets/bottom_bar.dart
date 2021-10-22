@@ -39,6 +39,10 @@ class BottomBar extends StatelessWidget {
             icon: Icon(Icons.list),
             label: '더보기',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.manage_accounts),
+            label: '내정보',
+          ),
         ],
       ),
     );

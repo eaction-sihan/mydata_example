@@ -29,7 +29,7 @@ class AppBar1 extends StatelessWidget with PreferredSizeWidget {
             ),
             NamedIcon(
               iconData: Icons.notifications_none ,
-              notificationCount: 1,
+              notificationCount: 10,
               onTap: () {},
             ),
           ],

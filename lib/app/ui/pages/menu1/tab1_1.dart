@@ -30,7 +30,7 @@ class Tab1_1 extends StatelessWidget {
                   _buildWriter(index),
                   _buildImage(index),
                   // Divider(height: 1, thickness: 1, color: Colors.grey[300]),
-                  _buildTail(c.postList[index].commentCount),
+                  _buildTail(index),
                 ],
               ),
             );
@@ -50,7 +50,7 @@ class Tab1_1 extends StatelessWidget {
         separatorBuilder: (_, index) => Divider(
           height: 1,
           thickness: 1,
-          color: Colors.grey[200],
+          color: Colors.grey[300],
         ),
         itemCount: c.postList.length + 1,
       );
@@ -69,9 +69,10 @@ class Tab1_1 extends StatelessWidget {
           Row(children: [
             Icon(
               FontAwesomeIcons.comment,
-              color: Colors.grey,
+              color: fTextColor,
               size: 22,
             ),
+            SizedBox(width: 3),
             Container(
               padding: EdgeInsets.all(4),
               child: Text(c.postList[index].category,
@@ -138,28 +139,57 @@ class Tab1_1 extends StatelessWidget {
         horizontal: 16,
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          ImageContainer(
-            width: 30,
-            height: 30,
-            borderRadius: 15,
-            imageUrl: c.postList[index].profileImgUri,
-          ),
-          Text.rich(
-            TextSpan(
+          Row(children: [
+            Row(
               children: [
-                TextSpan(
-                    text: ' ${c.postList[index].userName}',
-                    style: textTheme().subtitle2),
-                TextSpan(
-                    text: ' ${c.postList[index].location}',
-                    style: textTheme().bodyText2),
-                TextSpan(
-                    text: ' 인증 ${c.postList[index].authCount}회',
-                    style: textTheme().bodyText2)
+                ImageContainer(
+                  width: 30,
+                  height: 30,
+                  borderRadius: 15,
+                  imageUrl: c.postList[index].profileImgUri,
+                ),
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                          text: ' ${c.postList[index].userName}',
+                          style: textTheme().subtitle2),
+                      // TextSpan(
+                      //     text: ' ${c.postList[index].location}',
+                      //     style: textTheme().bodyText2),
+                      // TextSpan(
+                      //     text: ' 인증 ${c.postList[index].authCount}회',
+                      //     style: textTheme().bodyText2)
+                    ],
+                  ),
+                )
               ],
             ),
-          )
+          ]),
+
+          Row(
+            children: [
+              Text("${c.postList[index].commentCount}", style: textTheme().bodyText2,),
+              SizedBox(width: 3),
+              Icon(
+                FontAwesomeIcons.arrowCircleUp,
+                color: fPrimaryColor,
+                size: 16,
+              ),
+              SizedBox(width: 8),
+              Text("${c.postList[index].authCount}", style: textTheme().bodyText2,),
+              SizedBox(width: 3),
+              Icon(
+                FontAwesomeIcons.arrowCircleDown,
+                color: Colors.blue,
+                size: 16,
+              ),
+              SizedBox(width: 8),
+            ],
+          ),
+
         ],
       ),
     );
@@ -180,28 +210,72 @@ class Tab1_1 extends StatelessWidget {
     );
   }
 
-  Padding _buildTail(int commentCount) {
+  Padding _buildTail(index) {
     return Padding(
       padding: const EdgeInsets.all(16),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Icon(
-            FontAwesomeIcons.smile,
-            color: Colors.grey,
-            size: 22,
+          Row(
+              children: [
+                Icon(
+                  FontAwesomeIcons.star,
+                  color: fTextColor,
+                  size: 18,
+                ),
+              ]
           ),
-          SizedBox(width: 8),
-          Text(
-            "$commentCount",
-            style: textTheme().bodyText2,
+          Row(
+              children: [
+                Icon(
+                  FontAwesomeIcons.comment,
+                  color: fTextColor,
+                  size: 18,
+                ),
+                SizedBox(width: 5),
+                Text(
+                  "${c.postList[index].commentCount}",
+                  style: textTheme().bodyText2,
+                ),
+              ]
           ),
-          SizedBox(width: 22),
-          Icon(
-            FontAwesomeIcons.shareAlt,
-            color: Colors.grey,
-            size: 22,
+          Row(
+              children: [
+                Icon(
+                  FontAwesomeIcons.heart,
+                  color: fTextColor,
+                  size: 18,
+                ),
+                SizedBox(width: 5),
+                Text(
+                  "${c.postList[index].authCount}",
+                  style: textTheme().bodyText2,
+                ),
+              ]
           ),
-          SizedBox(width: 8),
+          Row(
+              children: [
+                Icon(
+                  FontAwesomeIcons.shareAlt,
+                  color: fTextColor,
+                  size: 18,
+                ),
+              ]
+          ),
+          Row(
+              children: [
+                Icon(
+                  FontAwesomeIcons.userCircle,
+                  color: fTextColor,
+                  size: 18,
+                ),
+                SizedBox(width: 5),
+                Text(
+                  "${c.postList[index].authCount}",
+                  style: textTheme().bodyText2,
+                ),
+              ]
+          ),
         ],
       ),
     );

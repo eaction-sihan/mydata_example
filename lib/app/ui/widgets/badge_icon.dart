@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:getx_pattern/app/ui/theme/app_theme.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class NamedIcon extends StatelessWidget {
   final IconData iconData;
@@ -31,14 +33,14 @@ class NamedIcon extends StatelessWidget {
                 ],
               ),
               Positioned(
-                top: 4,
-                right: 8,
+                top: 6,
+                right: 6,
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  padding: EdgeInsets.symmetric(horizontal: 6, vertical: 3),
                   decoration:
-                      BoxDecoration(shape: BoxShape.circle, color: Colors.red),
+                      BoxDecoration(shape: BoxShape.circle, color: fPrimaryColor),
                   alignment: Alignment.center,
-                  child: Text('$notificationCount'),
+                  child: Text('$notificationCount', style: GoogleFonts.nanumGothic(fontSize: 12.0),),
                 ),
               )
             ],

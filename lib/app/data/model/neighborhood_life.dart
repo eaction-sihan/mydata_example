@@ -30,28 +30,28 @@ String lifeTitle = '이웃과 함께 만드는 봄 간식 지도 마음까지 �
 // 샘플 데이터 2
 List<NeighborhoodLife> neighborhoodLifeList = [
   NeighborhoodLife(
-    category: '우리동네질문',
+    category: '갤럭시버즈 무선이어폰 색상 선호도 조사',
     profileImgUri: 'https://placeimg.com/200/100/people/grayscale',
-    userName: '헬로비비',
+    userName: 'yoojaeseok',
     location: '좌동',
-    content: '예민한 개도 미용할 수 있는 곳이나 동물 병원 어디 있을까요?\n'
-        '내일 유기견을 데려오기로 했는데 아직 성향을 잘 몰라서 걱정이 돼요 ㅜㅜ.',
-    contentImgUri: 'https://placeimg.com/200/100/tech/grayscale',
+    content: '삼성 무선이어폰 신제품 버즈라이브\n'
+        '색상 선호도 조사에 참여하세요!',
+    contentImgUri: 'https://img.kr.news.samsung.com/kr/wp-content/uploads/2021/01/%EC%82%BC%EC%84%B1-%EA%B0%A4%EB%9F%AD%EC%8B%9C-%EB%B2%84%EC%A6%88-%ED%94%84%EB%A1%9C_3%EC%A2%85-1.jpg',
     commentCount: 11,
     authCount: 3,
-    date: '3시간전',
+    date: '15:34',
     type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
-    category: '우리동네소식',
+    category: '에어팟 프로 vs 버즈 라이브',
     profileImgUri: 'https://placeimg.com/200/100/people',
     userName: '당근토끼',
     location: '우동',
-    content: '이명 치료 잘 아시는 분 있나요?',
+    content: '',
     contentImgUri: 'https://placeimg.com/200/100/animal/grayscale',
     commentCount: 2,
     authCount: 1,
-    date: '1일전',
+    date: '10/18',
     type: ['제품', '문화'],
   ),
   NeighborhoodLife(
@@ -63,7 +63,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     contentImgUri: '',
     commentCount: 11,
     authCount: 8,
-    date: '1일전',
+    date: '10/15',
     type: ['문화', '사회'],
   ),
   NeighborhoodLife(
@@ -75,7 +75,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     contentImgUri: '',
     commentCount: 0,
     authCount: 7,
-    date: '3일전',
+    date: '10/13',
     type: ['제품'],
   ),
   NeighborhoodLife(
@@ -87,7 +87,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     contentImgUri: 'https://placeimg.com/200/100/tech',
     commentCount: 11,
     authCount: 2,
-    date: '5일전',
+    date: '10/10',
     type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
@@ -100,7 +100,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     contentImgUri: 'https://placeimg.com/200/100/tech/grayscale',
     commentCount: 11,
     authCount: 3,
-    date: '3시간전',
+    date: '10/10',
     type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
@@ -113,7 +113,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     contentImgUri: 'https://placeimg.com/200/100/tech/grayscale',
     commentCount: 11,
     authCount: 3,
-    date: '3시간전',
+    date: '10/10',
     type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
@@ -126,7 +126,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     contentImgUri: 'https://placeimg.com/200/100/tech/grayscale',
     commentCount: 11,
     authCount: 3,
-    date: '3시간전',
+    date: '10/10',
     type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
@@ -139,7 +139,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     contentImgUri: 'https://placeimg.com/200/100/tech/grayscale',
     commentCount: 11,
     authCount: 3,
-    date: '3시간전',
+    date: '10/10',
     type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
@@ -152,7 +152,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     contentImgUri: 'https://placeimg.com/200/100/tech/grayscale',
     commentCount: 11,
     authCount: 3,
-    date: '3시간전',
+    date: '10/10',
     type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
@@ -165,7 +165,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     contentImgUri: 'https://placeimg.com/200/100/tech/grayscale',
     commentCount: 11,
     authCount: 3,
-    date: '3시간전',
+    date: '10/10',
     type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
@@ -178,7 +178,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     contentImgUri: 'https://placeimg.com/200/100/tech/grayscale',
     commentCount: 11,
     authCount: 3,
-    date: '3시간전',
+    date: '10/10',
     type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
@@ -191,7 +191,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     contentImgUri: 'https://placeimg.com/200/100/tech/grayscale',
     commentCount: 11,
     authCount: 3,
-    date: '3시간전',
+    date: '10/10',
     type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
@@ -204,7 +204,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     contentImgUri: 'https://placeimg.com/200/100/tech/grayscale',
     commentCount: 11,
     authCount: 3,
-    date: '3시간전',
+    date: '10/10',
     type: ['제품', '문화', '사회'],
   ),
   NeighborhoodLife(
@@ -217,7 +217,7 @@ List<NeighborhoodLife> neighborhoodLifeList = [
     contentImgUri: 'https://placeimg.com/200/100/tech/grayscale',
     commentCount: 11,
     authCount: 3,
-    date: '3시간전',
+    date: '10/10',
     type: ['제품', '문화', '사회'],
   ),
 ];

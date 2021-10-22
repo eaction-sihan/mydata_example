@@ -212,68 +212,77 @@ class Tab1_1 extends StatelessWidget {
 
   Padding _buildTail(index) {
     return Padding(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Row(
               children: [
-                Icon(
-                  FontAwesomeIcons.star,
+                IconButton(
+                  icon: Icon(FontAwesomeIcons.star),
                   color: fTextColor,
-                  size: 16,
+                  iconSize: 16,
+                  onPressed: () {
+                    print('star button is clicked');
+                  },
                 ),
               ]
           ),
           Row(
               children: [
-                Icon(
-                  FontAwesomeIcons.comment,
+                TextButton.icon(
+                  icon: Icon(FontAwesomeIcons.comment, size: 16),
+                  style: TextButton.styleFrom(primary: fTextColor),
+                  label: Text(
+                    "${c.postList[index].commentCount}",
+                    style: textTheme().bodyText2,
+                  ),
+                  onPressed: () {
+                    print('comment button is clicked');
+                  },
+                )
+              ]
+          ),
+          Row(
+              children: [
+                TextButton.icon(
+                  icon: Icon(FontAwesomeIcons.heart, size: 16),
+                  style: TextButton.styleFrom(primary: fTextColor),
+                  label: Text(
+                    "${c.postList[index].authCount}",
+                    style: textTheme().bodyText2,
+                  ),
+                  onPressed: () {
+                    print('heart button is clicked');
+                  },
+                )
+              ]
+          ),
+          Row(
+              children: [
+                IconButton(
+                  icon: Icon(Icons.share_outlined),
                   color: fTextColor,
-                  size: 16,
-                ),
-                SizedBox(width: 5),
-                Text(
-                  "${c.postList[index].commentCount}",
-                  style: textTheme().bodyText2,
+                  iconSize: 16,
+                  onPressed: () {
+                    print('share button is clicked');
+                  },
                 ),
               ]
           ),
           Row(
               children: [
-                Icon(
-                  FontAwesomeIcons.heart,
-                  color: fTextColor,
-                  size: 16,
-                ),
-                SizedBox(width: 5),
-                Text(
-                  "${c.postList[index].authCount}",
-                  style: textTheme().bodyText2,
-                ),
-              ]
-          ),
-          Row(
-              children: [
-                Icon(
-                  Icons.share_outlined,
-                  color: fTextColor,
-                  size: 20,
-                ),
-              ]
-          ),
-          Row(
-              children: [
-                Icon(
-                  FontAwesomeIcons.userCircle,
-                  color: fTextColor,
-                  size: 16,
-                ),
-                SizedBox(width: 5),
-                Text(
-                  "${c.postList[index].authCount}",
-                  style: textTheme().bodyText2,
-                ),
+                TextButton.icon(
+                  icon: Icon(FontAwesomeIcons.userCircle, size: 16),
+                  style: TextButton.styleFrom(primary: fTextColor),
+                  label: Text(
+                    "${c.postList[index].authCount}",
+                    style: textTheme().bodyText2,
+                  ),
+                  onPressed: () {
+                    print('user button is clicked');
+                  },
+                )
               ]
           ),
         ],

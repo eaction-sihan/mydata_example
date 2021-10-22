@@ -136,7 +136,7 @@ class Tab1_1 extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(
         vertical: 9,
-        horizontal: 16,
+        horizontal: 18,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

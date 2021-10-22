@@ -32,7 +32,7 @@ TextTheme textTheme() {
     subtitle1: GoogleFonts.nanumGothic(fontSize: 16.0, color: fTextColor),
     subtitle2: GoogleFonts.nanumGothic(fontSize: 14.0, color: fTextColor, fontWeight: FontWeight.bold),
     bodyText1: GoogleFonts.nanumGothic(fontSize: 15.0, color: fTextColor),
-    bodyText2: GoogleFonts.nanumGothic(fontSize: 14.0, color: fTextColor),
+    bodyText2: GoogleFonts.nanumGothic(fontSize: 14.0, color: fTextColor, height: 1.5),
 
   );
 }

@@ -60,7 +60,7 @@ class Tab1_1 extends StatelessWidget {
   Padding _buildTop(index) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        vertical: 16,
+        vertical: 14,
         horizontal: 16,
       ),
       child: Row(
@@ -106,7 +106,7 @@ class Tab1_1 extends StatelessWidget {
   Padding _buildType(index) {
     return Padding(
         padding:
-            const EdgeInsets.only(top: 14, bottom: 10, left: 20, right: 24),
+            const EdgeInsets.only(top: 16, bottom: 10, left: 20, right: 24),
         child:
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [

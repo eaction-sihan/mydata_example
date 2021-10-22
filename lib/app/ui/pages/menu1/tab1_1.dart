@@ -150,6 +150,7 @@ class Tab1_1 extends StatelessWidget {
                   borderRadius: 15,
                   imageUrl: c.postList[index].profileImgUri,
                 ),
+                SizedBox(width: 2),
                 Text.rich(
                   TextSpan(
                     children: [

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/home_controller.dart';
+import 'package:getx_pattern/app/ui/theme/app_theme.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BottomBar extends StatelessWidget {
   final HomeController c = Get.put(HomeController());
@@ -12,10 +14,10 @@ class BottomBar extends StatelessWidget {
           color: Colors.white,
           border: Border(top: BorderSide(color: Colors.black26, width: 0.5))),
       child: BottomNavigationBar(
-        unselectedItemColor: Colors.black38,
+        unselectedItemColor: Colors.black54,
         selectedItemColor: Colors.black,
-        // selectedLabelStyle: GoogleFonts.nanumGothic(fontSize: 13.0, color: fTextColor, fontWeight: FontWeight.bold),
-        // unselectedLabelStyle: GoogleFonts.nanumGothic(fontSize: 13.0, color: fTextColor),
+        selectedLabelStyle: GoogleFonts.nanumGothic(fontSize: 11.0, color: fTextColor, fontWeight: FontWeight.bold),
+        unselectedLabelStyle: GoogleFonts.nanumGothic(fontSize: 11.0, color: fTextColor),
         onTap: c.changeTabIndex,
         currentIndex: c.tabIndex,
         showSelectedLabels: true,
@@ -24,23 +26,55 @@ class BottomBar extends StatelessWidget {
         backgroundColor: Colors.white,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.home_outlined),
+            activeIcon:Icon(Icons.home),
             label: '홈',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: '검색',
+            icon: Icon(Icons.view_agenda_outlined),
+            activeIcon:Icon(Icons.view_agenda),
+            label: '아젠다북',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.save_alt),
-            label: '저장한 콘텐츠',
+            activeIcon:Icon(Icons.calendar_today),
+            icon: new Stack(
+              children: <Widget>[
+                new Icon(Icons.calendar_today_outlined),
+                new Positioned(
+                  top: 0,
+                  right: 0,
+                  child: new Container(
+                    padding: EdgeInsets.all(1),
+                    decoration: new BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    constraints: BoxConstraints(
+                      minWidth: 12,
+                      minHeight: 12,
+                    ),
+                    child: new Text(
+                      '10',
+                      style: new TextStyle(
+                        color: Colors.white,
+                        fontSize: 11,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            label: '데일리',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            label: '더보기',
+            icon: Icon(Icons.account_balance_wallet_outlined),
+            activeIcon:Icon(Icons.account_balance_wallet),
+            label: '지갑',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.manage_accounts),
+            icon: Icon(Icons.manage_accounts_outlined),
+            activeIcon:Icon(Icons.manage_accounts),
             label: '내정보',
           ),
         ],

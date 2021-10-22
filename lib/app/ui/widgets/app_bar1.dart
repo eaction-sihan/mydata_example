@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/home_controller.dart';
@@ -27,10 +28,21 @@ class AppBar1 extends StatelessWidget with PreferredSizeWidget {
                 print('Search button is clicked');
               },
             ),
-            NamedIcon(
-              iconData: Icons.notifications_none ,
-              notificationCount: 10,
-              onTap: () {},
+            // NamedIcon(
+            //   iconData: Icons.notifications_none ,
+            //   notificationCount: 10,
+            //   onTap: () {},
+            // ),
+            Badge(
+              position: BadgePosition.topEnd(top: 3, end: 6),
+              shape: BadgeShape.square,
+              borderRadius: BorderRadius.circular(10),
+              badgeColor: fPrimaryColor,
+              badgeContent: Text('10', style: TextStyle(color: Colors.white, fontSize: 10)),
+              child: IconButton(
+                icon: Icon(Icons.notifications_none),
+                onPressed: () {},
+              ),
             ),
           ],
           //bottom: TopMenu()

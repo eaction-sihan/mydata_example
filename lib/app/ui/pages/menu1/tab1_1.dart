@@ -264,7 +264,7 @@ class Tab1_1 extends StatelessWidget {
                 IconButton(
                   icon: Icon(Icons.share_outlined),
                   color: fTextColor,
-                  iconSize: 16,
+                  iconSize: 20,
                   onPressed: () {
                     print('share button is clicked');
                   },

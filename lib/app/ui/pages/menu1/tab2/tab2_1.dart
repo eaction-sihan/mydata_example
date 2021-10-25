@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_pattern/app/ui/pages/menu1/tab2/widgets/bottom_modal.dart';
-import 'package:getx_pattern/app/ui/pages/menu1/tab2/widgets/button_widget.dart';
+import 'package:getx_pattern/app/ui/widgets/modal/bottom_modal.dart';
+import 'package:getx_pattern/app/ui/widgets/button/button_widget.dart';
 
 
 class Tab2_1 extends StatelessWidget {
@@ -20,16 +20,31 @@ class Tab2_1 extends StatelessWidget {
           ElevatedButton(
             child: const Text('showModalBottomSheet'),
             onPressed: () {
-              showModalBottomSheet<void>(
-                context: context,
-                builder: (BuildContext context) {
-                  return BottomModal();
-                },
-              );
+              BottomModal(cont: _bottomModal(context)).show(context);
             },
           ),
         ],
       ),
     );
+  }
+
+  Container _bottomModal(context) {
+    return Container(
+      height: 300,
+      color: Colors.white,
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const Text('Modal BottomSheet'),
+            ElevatedButton(
+              child: const Text('Close BottomSheet'),
+              onPressed: () => Navigator.pop(context),
+            )
+          ],
+        ),
+      ),
+    );;
   }
 }

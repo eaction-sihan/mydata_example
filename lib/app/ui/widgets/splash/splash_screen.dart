@@ -38,18 +38,18 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
           ),
-          // Expanded(
-          //   flex: 1,
-          //   child: Padding(
-          //     padding: EdgeInsets.all(24),
-          //     child: TextButton(
-          //       child: Text("Continue"),
-          //       onPressed: () {
-          //         _completeSplash(context, Menu1Main());
-          //       },
-          //     ),
-          //   ),
-          // ),
+          Expanded(
+            flex: 1,
+            child: Padding(
+              padding: EdgeInsets.all(24),
+              child: TextButton(
+                child: Text("자신과 사회가 함께 고민하는 다양함. 아젠다에 오신것을 환영합니다."),
+                onPressed: () {
+                  _completeSplash(context, Menu1Main());
+                },
+              ),
+            ),
+          ),
         ],
       )),
     );

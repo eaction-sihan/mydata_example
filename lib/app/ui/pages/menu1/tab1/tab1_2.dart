@@ -27,7 +27,7 @@ class Tab1_2 extends StatelessWidget {
               // Enable tooltip
               tooltipBehavior: TooltipBehavior(enable: true),
               series: <ChartSeries<_SalesData, String>>[
-                LineSeries<_SalesData, String>(
+                BarSeries<_SalesData, String>(
                     dataSource: data,
                     xValueMapper: (_SalesData sales, _) => sales.year,
                     yValueMapper: (_SalesData sales, _) => sales.sales,

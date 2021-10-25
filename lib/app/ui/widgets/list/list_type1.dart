@@ -176,7 +176,7 @@ class ListType1 extends StatelessWidget {
                     style: textTheme().subtitle2,
                   ),
                   onPressed: () {
-                    print('comment button is clicked');
+                    print('Writer button is clicked');
                   },
                 ),
               ],

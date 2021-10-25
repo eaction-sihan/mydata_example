@@ -24,7 +24,7 @@ class LeftMenu1 extends StatelessWidget {
             accountName: Text('한승일', style: GoogleFonts.nanumGothic(fontSize: 14.0, color: Colors.white)),
             accountEmail: Text('sihan@email.com', style: GoogleFonts.nanumGothic(fontSize: 14.0, color: Colors.white)),
             onDetailsPressed: () {
-              print('arrow is clicked');
+              Navigator.of(context).pop();
             },
             decoration: BoxDecoration(
                 color: fPrimaryColor,
@@ -43,7 +43,7 @@ class LeftMenu1 extends StatelessWidget {
             onTap: () {
               Get.off(() => Menu1Main());
             },
-            trailing: Icon(Icons.add),
+            //trailing: Icon(Icons.add),
           ),
           ListTile(
             leading: Icon(
@@ -54,7 +54,7 @@ class LeftMenu1 extends StatelessWidget {
             onTap: () {
               Get.off(() => Menu2Main());
             },
-            trailing: Icon(Icons.add),
+            //trailing: Icon(Icons.add),
           ),
           ListTile(
             leading: Icon(
@@ -65,7 +65,7 @@ class LeftMenu1 extends StatelessWidget {
             onTap: () {
               //Get.off(() => Menu2Main());
             },
-            trailing: Icon(Icons.add),
+            //trailing: Icon(Icons.add),
           ),
         ],
       ),

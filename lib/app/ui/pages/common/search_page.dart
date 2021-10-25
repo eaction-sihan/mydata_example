@@ -27,7 +27,7 @@ class SearchPage extends StatelessWidget {
                         _txtController.clear();
                       },
                     ),
-                    hintText: 'Search...',
+                    hintText: '검색어를 입력해주세요.',
                     hintStyle: textTheme().subtitle1,
                     border: InputBorder.none),
               ),

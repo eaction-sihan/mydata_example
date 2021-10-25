@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:getx_pattern/app/ui/widgets/tab/point_tab_indicator.dart';
 
-class TopMenu extends StatelessWidget with PreferredSizeWidget {
+class TopTab extends StatelessWidget with PreferredSizeWidget {
   List<String> categories;
   bool isScroll = false;
-  TopMenu({
+  TopTab({
     Key? key,
     required this.categories,
     required this.isScroll

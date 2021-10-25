@@ -28,12 +28,12 @@ class BottomBar extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
             activeIcon:Icon(Icons.home),
-            label: '홈',
+            label: c.bottom_categories[0],
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.view_agenda_outlined),
             activeIcon:Icon(Icons.view_agenda),
-            label: '아젠다북',
+            label: c.bottom_categories[1],
           ),
           BottomNavigationBarItem(
             activeIcon:Icon(Icons.calendar_today),
@@ -65,17 +65,17 @@ class BottomBar extends StatelessWidget {
                 )
               ],
             ),
-            label: '데일리',
+            label: c.bottom_categories[2],
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_balance_wallet_outlined),
             activeIcon:Icon(Icons.account_balance_wallet),
-            label: '지갑',
+            label: c.bottom_categories[3],
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.manage_accounts_outlined),
             activeIcon:Icon(Icons.manage_accounts),
-            label: '내정보',
+            label: c.bottom_categories[4],
           ),
         ],
       ),

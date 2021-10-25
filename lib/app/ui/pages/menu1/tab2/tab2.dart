@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab2/tab2_1.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
-import 'package:getx_pattern/app/ui/widgets/menu/top_menu.dart';
+import 'package:getx_pattern/app/ui/widgets/tab/top_tab.dart';
 
 class Tab2 extends StatelessWidget {
   @override
@@ -25,7 +25,7 @@ class Tab2 extends StatelessWidget {
               style: textTheme().headline1,
             ),
           ),
-          TopMenu(categories: categories, isScroll: false),
+          TopTab(categories: categories, isScroll: false),
           Expanded(
             child: Container(
               child: TabBarView(children: [

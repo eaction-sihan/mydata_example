@@ -6,7 +6,7 @@ import 'package:getx_pattern/app/ui/pages/menu1/tab1/tab1_1.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1/tab1_2.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1/tab1_3.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
-import 'package:getx_pattern/app/ui/widgets/menu/top_menu.dart';
+import 'package:getx_pattern/app/ui/widgets/tab/top_tab.dart';
 
 class Tab1 extends StatelessWidget {
   @override
@@ -40,7 +40,7 @@ class Tab1 extends StatelessWidget {
               ),
             ]),
           ),
-          TopMenu(categories: categories, isScroll: true),
+          TopTab(categories: categories, isScroll: true),
           Expanded(
             child: Container(
               child: TabBarView(children: [

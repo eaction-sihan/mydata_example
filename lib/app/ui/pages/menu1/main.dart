@@ -29,12 +29,17 @@ class Main extends StatelessWidget {
                       Tab2(),
                       Container(
                         child: Center(
-                          child: Text('save'),
+                          child: Text('데일리'),
                         ),
                       ),
                       Container(
                         child: Center(
-                          child: Text('more'),
+                          child: Text('지갑'),
+                        ),
+                      ),
+                      Container(
+                        child: Center(
+                          child: Text('내정보'),
                         ),
                       ),
                     ],

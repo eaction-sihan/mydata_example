@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:getx_pattern/app/controller/home_controller.dart';
-import 'package:getx_pattern/app/ui/pages/menu1/tab1_1.dart';
-import 'package:getx_pattern/app/ui/pages/menu1/tab1_2.dart';
-import 'package:getx_pattern/app/ui/pages/menu1/tab1_3.dart';
+import 'package:getx_pattern/app/controller/menu1/main_controller.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab1/tab1_1.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab1/tab1_2.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab1/tab1_3.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
-import 'package:getx_pattern/app/ui/widgets/top_menu.dart';
+import 'package:getx_pattern/app/ui/widgets/menu/top_menu.dart';
 
 class Tab1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Get.put()을 사용하여 클래스를 인스턴스화하여 모든 "child'에서 사용가능하게 합니다.
-    final HomeController c = Get.put(HomeController());
+    final MainController c = Get.put(MainController());
 
     List<String> categories = ["전체", "사회", "경제", "문화/연예", "제품", "건강", "기타"];
 

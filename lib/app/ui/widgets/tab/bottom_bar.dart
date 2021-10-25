@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_pattern/app/controller/home_controller.dart';
+import 'package:getx_pattern/app/controller/menu1/main_controller.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BottomBar extends StatelessWidget {
-  final HomeController c = Get.put(HomeController());
+  final MainController c = Get.put(MainController());
 
   @override
   Widget build(BuildContext context) {

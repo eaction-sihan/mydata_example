@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:getx_pattern/app/ui/pages/menu1/controller/menu1_controller.dart';
+import 'package:getx_pattern/app/controller/common/list_type1_controller.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
-import 'package:getx_pattern/app/ui/widgets/image_container.dart';
-import 'package:getx_pattern/app/ui/widgets/last_list_btn.dart';
-import 'package:getx_pattern/app/ui/widgets/loading_widget.dart';
-import 'package:getx_pattern/app/ui/widgets/round_box.dart';
+import 'package:getx_pattern/app/ui/widgets/image/image_container.dart';
+import 'package:getx_pattern/app/ui/widgets/button/last_list_btn.dart';
+import 'package:getx_pattern/app/ui/widgets/etc/loading_widget.dart';
+import 'package:getx_pattern/app/ui/widgets/box/round_box.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ListType1 extends StatelessWidget {
-  final Menu1Controller c = Get.put(Menu1Controller());
+  final ListType1Controller c = Get.put(ListType1Controller());
 
   final String type;
 
@@ -18,7 +18,7 @@ class ListType1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: GetBuilder<Menu1Controller>(builder: (_) {
+    return Container(child: GetBuilder<ListType1Controller>(builder: (_) {
       return ListView.separated(
         controller: c.scrollController,
         itemBuilder: (_, index) {

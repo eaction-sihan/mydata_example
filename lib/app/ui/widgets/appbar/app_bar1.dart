@@ -1,12 +1,12 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_pattern/app/controller/home_controller.dart';
+import 'package:getx_pattern/app/controller/menu1/main_controller.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 
 class AppBar1 extends StatelessWidget with PreferredSizeWidget {
   // Get.put()을 사용하여 클래스를 인스턴스화하여 모든 "child'에서 사용가능하게 합니다.
-  final HomeController c = Get.put(HomeController());
+  final MainController c = Get.put(MainController());
 
   @override
   Widget build(BuildContext context) {

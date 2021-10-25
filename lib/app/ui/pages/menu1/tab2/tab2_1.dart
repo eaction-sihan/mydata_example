@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_pattern/app/ui/pages/menu2/widgets/bottom_modal.dart';
-import 'package:getx_pattern/app/ui/pages/menu2/widgets/button_widget.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab2/widgets/bottom_modal.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab2/widgets/button_widget.dart';
 
 import '../details.dart';
+
 
 class Tab2_1 extends StatelessWidget {
   @override

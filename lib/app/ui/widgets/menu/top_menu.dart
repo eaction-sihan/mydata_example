@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
-import 'package:getx_pattern/app/ui/widgets/point_tab_indicator.dart';
+import 'package:getx_pattern/app/ui/widgets/tab/point_tab_indicator.dart';
 
 class TopMenu extends StatelessWidget with PreferredSizeWidget {
   List<String> categories;

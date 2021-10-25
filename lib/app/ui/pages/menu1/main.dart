@@ -2,18 +2,18 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_pattern/app/controller/home_controller.dart';
-import 'package:getx_pattern/app/ui/pages/menu1/tab1.dart';
-import 'package:getx_pattern/app/ui/pages/menu2/tab2.dart';
-import 'package:getx_pattern/app/ui/widgets/app_bar1.dart';
-import 'package:getx_pattern/app/ui/widgets/bottom_bar.dart';
-import 'package:getx_pattern/app/ui/widgets/left_menu.dart';
+import 'package:getx_pattern/app/controller/menu1/main_controller.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab1/tab1.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab2/tab2.dart';
+import 'package:getx_pattern/app/ui/widgets/appbar/app_bar1.dart';
+import 'package:getx_pattern/app/ui/widgets/tab/bottom_bar.dart';
+import 'package:getx_pattern/app/ui/widgets/menu/left_menu.dart';
 
-class HomePage extends StatelessWidget {
+class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<HomeController>(
-      init: HomeController(),
+    return GetBuilder<MainController>(
+      init: MainController(),
       builder: (_) {
         return new WillPopScope(
             onWillPop: () => showExitPopup(context),

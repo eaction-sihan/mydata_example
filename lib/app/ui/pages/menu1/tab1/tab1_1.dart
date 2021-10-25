@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getx_pattern/app/ui/widgets/list_type1.dart';
+import 'package:getx_pattern/app/ui/widgets/list/list_type1.dart';
 
 class Tab1_1 extends StatelessWidget {
 

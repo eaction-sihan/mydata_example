@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/menu1/details_controller.dart';
 import 'package:getx_pattern/app/ui/widgets/appbar/app_bar2.dart';
+import 'package:getx_pattern/app/ui/widgets/dialog/alert.dart';
 import 'package:getx_pattern/app/ui/widgets/etc/loading_widget.dart';
 import 'package:getx_pattern/app/ui/widgets/menu/left_menu.dart';
-
 
 class Menu2Main extends StatelessWidget {
   @override
@@ -32,26 +32,9 @@ class Menu2Main extends StatelessWidget {
                         leading: Icon(Icons.android_outlined),
                         title: Text('$title'),
                         trailing: Icon(Icons.arrow_forward_outlined),
-                        onTap: () => Get.defaultDialog(
-                          title: c.postList[index].title,
-                          radius: 15.0,
-                          middleText: c.postList[index].body,
-                          actions: [
-                            ElevatedButton(
-                              onPressed: () {
-                                print("test");
-                                Get.back();
-                              },
-                              child: Text(
-                                "OK",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.black,
-                              ),
-                            )
-                          ],
-                        ),
+                        onTap: () => AlertModal(
+                            title: c.postList[index].title,
+                            midleText: c.postList[index].body).show(context),
                       ),
                     ),
                   );

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-
 class BottomModal {
-
   Container cont;
 
   BottomModal({
@@ -23,5 +21,4 @@ class BottomModal {
       },
     );
   }
-
 }

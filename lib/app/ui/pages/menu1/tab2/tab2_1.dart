@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_pattern/app/ui/widgets/dialog/confirm.dart';
 import 'package:getx_pattern/app/ui/widgets/modal/bottom_modal.dart';
 import 'package:getx_pattern/app/ui/widgets/button/button_widget.dart';
-
 
 class Tab2_1 extends StatelessWidget {
   @override
@@ -14,7 +14,13 @@ class Tab2_1 extends StatelessWidget {
           RaisedButtonCustomWidget(
             icon: Icons.list,
             text: "oi",
-            onPressed: () => {},
+            onPressed: () => ConfirmModal(
+              title: '진행하시겠습니까?',
+              onPressed: () {
+                print('OK');
+                Get.back();
+              },
+            ).show(context),
             borderColor: Colors.purple,
           ),
           ElevatedButton(
@@ -45,6 +51,7 @@ class Tab2_1 extends StatelessWidget {
           ],
         ),
       ),
-    );;
+    );
+    ;
   }
 }

@@ -12,7 +12,7 @@ class AppPages {
       page: () => SplashScreen(),
     ),
     GetPage(
-        name: Routes.INITIAL,
+        name: Routes.MENU1,
         page: () => Menu1Main(),
     ),
     GetPage(

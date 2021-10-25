@@ -40,16 +40,16 @@ class ListType1 extends StatelessWidget {
               );
             } else {
               return Container(
-                child: Column(
-                  children: [
-                    _buildTop(index),
-                    _buildWriting(index),
-                    _buildType(index),
-                    _buildWriter(index),
-
-                    _buildTail(index),
-                  ],
-                ),
+                // child: Column(
+                //   children: [
+                //     _buildTop(index),
+                //     _buildWriting(index),
+                //     _buildType(index),
+                //     _buildWriter(index),
+                //
+                //     _buildTail(index),
+                //   ],
+                // ),
               );
             }
 
@@ -154,8 +154,8 @@ class ListType1 extends StatelessWidget {
   Padding _buildWriter(index) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        vertical: 9,
-        horizontal: 18,
+        vertical: 0,
+        horizontal: 12,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -163,28 +163,22 @@ class ListType1 extends StatelessWidget {
           Row(children: [
             Row(
               children: [
-                ImageContainer(
-                  width: 30,
-                  height: 30,
-                  borderRadius: 15,
-                  imageUrl: c.postList[index].profileImgUri,
-                ),
-                SizedBox(width: 2),
-                Text.rich(
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                          text: ' ${c.postList[index].userName}',
-                          style: textTheme().subtitle2),
-                      // TextSpan(
-                      //     text: ' ${c.postList[index].location}',
-                      //     style: textTheme().bodyText2),
-                      // TextSpan(
-                      //     text: ' 인증 ${c.postList[index].authCount}회',
-                      //     style: textTheme().bodyText2)
-                    ],
+                TextButton.icon(
+                  icon: ImageContainer(
+                          width: 30,
+                          height: 30,
+                          borderRadius: 15,
+                          imageUrl: c.postList[index].profileImgUri,
+                        ),
+                  style: TextButton.styleFrom(primary: fTextColor),
+                  label: Text(
+                    ' ${c.postList[index].userName}',
+                    style: textTheme().subtitle2,
                   ),
-                )
+                  onPressed: () {
+                    print('comment button is clicked');
+                  },
+                ),
               ],
             ),
           ]),

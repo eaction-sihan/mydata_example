@@ -8,7 +8,7 @@ import 'app/ui/theme/app_theme.dart';
 void main() {
   runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: Routes.INITIAL,
+    initialRoute: Routes.SPLASH,
     theme: appThemeData,
     defaultTransition: Transition.fade,
     getPages: AppPages.pages,

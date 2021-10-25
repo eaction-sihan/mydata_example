@@ -9,7 +9,7 @@ import 'package:getx_pattern/app/ui/widgets/appbar/app_bar1.dart';
 import 'package:getx_pattern/app/ui/widgets/tab/bottom_bar.dart';
 import 'package:getx_pattern/app/ui/widgets/menu/left_menu.dart';
 
-class Main extends StatelessWidget {
+class Menu1Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<MainController>(
@@ -69,7 +69,6 @@ class Main extends StatelessWidget {
                       Expanded(
                         child: ElevatedButton(
                           onPressed: () {
-                            print('yes selected');
                             exit(0);
                           },
                           child: Text("Yes"),
@@ -81,7 +80,6 @@ class Main extends StatelessWidget {
                       Expanded(
                           child: ElevatedButton(
                         onPressed: () {
-                          print('no selected');
                           Navigator.of(context).pop();
                         },
                         child:

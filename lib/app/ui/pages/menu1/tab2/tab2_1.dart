@@ -20,7 +20,7 @@ class Tab2_1 extends StatelessWidget {
                 print('OK');
                 Get.back();
               },
-            ).show(context),
+            ).show(),
             borderColor: Colors.purple,
           ),
           ElevatedButton(

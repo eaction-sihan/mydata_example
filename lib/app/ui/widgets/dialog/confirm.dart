@@ -13,7 +13,7 @@ class ConfirmModal {
     this.onPressed,
   });
 
-  void show(BuildContext context) {
+  void show() {
     if (midleText == null) {
       midleText = "";
     }

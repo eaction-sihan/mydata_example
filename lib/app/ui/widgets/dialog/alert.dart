@@ -11,7 +11,7 @@ class AlertModal {
     this.midleText,
   });
 
-  void show(BuildContext context) {
+  void show() {
     if (midleText == null) {
       midleText = "";
     }

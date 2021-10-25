@@ -18,7 +18,7 @@ class AppBar1 extends StatelessWidget with PreferredSizeWidget {
       child: AppBar(
           // count가 변경 될 때마다 Obx(()=> 를 사용하여 Text()에 업데이트합니다.
           title: Obx(() =>
-              Text("HOME ${c.count1}", style: textTheme().headline1)),
+              Text("${c.appbarTitle}", style: textTheme().headline1)),
           centerTitle: true,
           actions: <Widget>[
             IconButton(

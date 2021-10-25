@@ -2,6 +2,7 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/menu1/main_controller.dart';
+import 'package:getx_pattern/app/ui/pages/common/search_page.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 
 class AppBar1 extends StatelessWidget with PreferredSizeWidget {
@@ -22,10 +23,7 @@ class AppBar1 extends StatelessWidget with PreferredSizeWidget {
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search), // 검색 아이콘 생성
-              onPressed: () {
-                // 아이콘 버튼 실행
-                print('Search button is clicked');
-              },
+              onPressed: () => Get.to(SearchPage()),
             ),
             // NamedIcon(
             //   iconData: Icons.notifications_none ,

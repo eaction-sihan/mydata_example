@@ -15,9 +15,8 @@ final ThemeData appThemeData = ThemeData(
         color: fPrimaryColor
     ),
   ),
-  fontFamily: 'Georgia',
   textTheme: TextTheme(
-    headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold, color: fTextColor),
+    headline1: GoogleFonts.nanumGothic(fontSize: 18.0, fontWeight: FontWeight.bold, color: fTextColor),
   ),
   colorScheme:
       ColorScheme.fromSwatch().copyWith(secondary: fPrimaryColor),

@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/menu1/details_controller.dart';
+import 'package:getx_pattern/app/ui/widgets/appbar/app_bar2.dart';
 import 'package:getx_pattern/app/ui/widgets/etc/loading_widget.dart';
+import 'package:getx_pattern/app/ui/widgets/menu/left_menu.dart';
 
 
-class DetailsPage extends StatelessWidget {
+class Menu2Main extends StatelessWidget {
   @override
   Widget build(context) {
     final DetailsController c = Get.put(DetailsController());
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('oi'.tr),
-      ),
+      appBar: AppBar2(),
+      drawer: LeftMenu1(),
       body: GetBuilder<DetailsController>(
         builder: (_) {
           return Padding(

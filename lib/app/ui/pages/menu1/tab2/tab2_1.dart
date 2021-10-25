@@ -3,8 +3,6 @@ import 'package:get/get.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab2/widgets/bottom_modal.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab2/widgets/button_widget.dart';
 
-import '../details.dart';
-
 
 class Tab2_1 extends StatelessWidget {
   @override
@@ -16,7 +14,7 @@ class Tab2_1 extends StatelessWidget {
           RaisedButtonCustomWidget(
             icon: Icons.list,
             text: "oi",
-            onPressed: () => Get.to(DetailsPage()),
+            onPressed: () => {},
             borderColor: Colors.purple,
           ),
           ElevatedButton(

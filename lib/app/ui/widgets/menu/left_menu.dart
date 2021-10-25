@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/menu1_main.dart';
+import 'package:getx_pattern/app/ui/pages/menu2/menu2_main.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -36,20 +39,9 @@ class LeftMenu1 extends StatelessWidget {
               Icons.home,
               color: Colors.grey[850],
             ),
-            title: Text('Home', style: textTheme().bodyText1,),
+            title: Text('Agenda', style: textTheme().bodyText1,),
             onTap: () {
-              print('Home is clicked');
-            },
-            trailing: Icon(Icons.add),
-          ),
-          ListTile(
-            leading: Icon(
-              Icons.settings,
-              color: Colors.grey[850],
-            ),
-            title: Text('Setting', style: textTheme().bodyText1,),
-            onTap: () {
-              print('Setting is clicked');
+              Get.off(() => Menu1Main());
             },
             trailing: Icon(Icons.add),
           ),
@@ -60,7 +52,18 @@ class LeftMenu1 extends StatelessWidget {
             ),
             title: Text('Q&A', style: textTheme().bodyText1,),
             onTap: () {
-              print('Q&A is clicked');
+              Get.off(() => Menu2Main());
+            },
+            trailing: Icon(Icons.add),
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.settings,
+              color: Colors.grey[850],
+            ),
+            title: Text('Setting', style: textTheme().bodyText1,),
+            onTap: () {
+              //Get.off(() => Menu2Main());
             },
             trailing: Icon(Icons.add),
           ),

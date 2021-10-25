@@ -20,6 +20,7 @@ class TopMenu extends StatelessWidget with PreferredSizeWidget {
           //     bottom: BorderSide(width: 0.3, color: Colors.grey)),
           color: Colors.white),
       child: TabBar(
+        labelPadding: EdgeInsets.symmetric(horizontal: 12.0),
         tabs: List.generate(
           categories.length,
           (index) => Tab(

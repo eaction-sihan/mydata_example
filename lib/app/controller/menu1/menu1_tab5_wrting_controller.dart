@@ -11,18 +11,14 @@ class Menu1Tab5WritingController extends GetxController {
   PageController pageController = PageController(initialPage: 0);
   int curPage = 0;
 
+  double currentSlider1 = 20;
+  bool isChecked = false;
+  List<bool> selections1 = List.generate(3, (index) => false);
+
   @override
   void onInit() {
-
-    print('init :${curPage}');
     curPage = 0;
     super.onInit();
-  }
-
-  @override
-  void dispose() {
-    print('dispose :${curPage}');
-    super.dispose();
   }
 
   previousPage() {

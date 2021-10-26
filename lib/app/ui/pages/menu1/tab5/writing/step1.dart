@@ -30,12 +30,26 @@ class Menu1Tab5WritingStep1 extends StatelessWidget {
           ),
           Container(
             height: 50,
-            color: Colors.amber[500],
-            child: const Center(child: Text('Entry B')),
+            child: DropdownButton<String>(
+              value: c.dropdownValue1,
+              icon: const Icon(Icons.arrow_downward),
+              iconSize: 24,
+              elevation: 16,
+              onChanged: (String? newValue) {
+                c.dropdownValue1 = newValue!;
+                c.update();
+              },
+              items: <String>['One', 'Two', 'Free', 'Four']
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+            ),
           ),
           Container(
             height: 50,
-            color: Colors.amber[100],
             child: Slider(
               value: c.currentSlider1,
               min: 0,

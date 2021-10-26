@@ -14,6 +14,7 @@ class Menu1Tab5WritingController extends GetxController {
   double currentSlider1 = 20;
   bool isChecked = false;
   List<bool> selections1 = List.generate(3, (index) => false);
+  String dropdownValue1 = 'One';
 
   @override
   void onInit() {

@@ -10,8 +10,6 @@ import 'package:getx_pattern/app/ui/widgets/appbar/app_bar2.dart';
 class Menu1Tab5Writing extends StatelessWidget {
   static const String _title = 'WRITING';
 
-  //final Menu1Tab5WritingController c = Get.put(Menu1Tab5WritingController());
-
   List<Widget> _stepPages = [
     Menu1Tab5WritingStep1(),
     Menu1Tab5WritingStep2(),

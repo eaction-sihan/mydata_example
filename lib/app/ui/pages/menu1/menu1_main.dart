@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/common/main_controller.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1/tab1.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab2/tab2.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab5/tab5.dart';
 import 'package:getx_pattern/app/ui/widgets/appbar/app_bar1.dart';
 import 'package:getx_pattern/app/ui/widgets/tab/bottom_bar.dart';
 import 'package:getx_pattern/app/ui/widgets/menu/left_menu.dart';
@@ -37,11 +38,7 @@ class Menu1Main extends StatelessWidget {
                           child: Text('지갑'),
                         ),
                       ),
-                      Container(
-                        child: Center(
-                          child: Text('내정보'),
-                        ),
-                      ),
+                      Tab5(),
                     ],
                   ),
                 ),

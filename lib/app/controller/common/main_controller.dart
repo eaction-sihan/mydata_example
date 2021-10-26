@@ -4,7 +4,7 @@ class MainController extends GetxController {
   var tabIndex = 0;
   var appbarTitle = "홈".obs;
 
-  List<String> bottom_categories = ["홈", "아젠다북", "데일리", "지갑", "내정보"];
+  List<String> bottom_categories = ["홈", "아젠다", "데일리", "지갑", "내정보"];
 
   void changeTabIndex(int index) {
     tabIndex = index;

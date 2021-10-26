@@ -7,7 +7,7 @@ import 'dart:convert';
 
 import 'package:getx_pattern/app/data/provider/url.dart';
 
-class ListType1Controller extends GetxController {
+class Menu1ListType1Controller extends GetxController {
   var scrollController = ScrollController();
 
   final postList = [];

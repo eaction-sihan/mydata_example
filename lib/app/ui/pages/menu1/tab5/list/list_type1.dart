@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:getx_pattern/app/controller/common/list_type1_controller.dart';
+import 'package:getx_pattern/app/controller/menu1/menu1_list_type1_controller.dart';
+import 'package:getx_pattern/app/controller/menu5/menu5_list_type1_controller.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:getx_pattern/app/ui/widgets/image/image_container.dart';
 import 'package:getx_pattern/app/ui/widgets/button/last_list_btn.dart';
@@ -9,17 +10,17 @@ import 'package:getx_pattern/app/ui/widgets/etc/loading_widget.dart';
 import 'package:getx_pattern/app/ui/widgets/box/round_box.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ListType1 extends StatelessWidget {
-  final ListType1Controller c = Get.put(ListType1Controller());
+class Menu5ListType1 extends StatelessWidget {
+  final Menu5ListType1Controller c = Get.put(Menu5ListType1Controller());
 
   final String type;
 
-  ListType1({Key? key, required this.type}) : super(key: key);
+  Menu5ListType1({Key? key, required this.type}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: GetBuilder<ListType1Controller>(
+      child: GetBuilder<Menu5ListType1Controller>(
           builder: (_) {
           return ListView.separated(
             controller: c.scrollController,
@@ -176,7 +177,7 @@ class ListType1 extends StatelessWidget {
                         ),
                   style: TextButton.styleFrom(primary: fTextColor),
                   label: Text(
-                    ' ${c.postList[index].userName}',
+                    '${c.postList[index].userName}',
                     style: textTheme().subtitle2,
                   ),
                   onPressed: () {

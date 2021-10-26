@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/ui/widgets/dialog/confirm.dart';
 import 'package:getx_pattern/app/ui/widgets/modal/bottom_modal.dart';
-import 'package:getx_pattern/app/ui/widgets/button/button_widget.dart';
+import 'package:getx_pattern/app/ui/widgets/button/raised_button_widget.dart';
 
 class Tab2_1 extends StatelessWidget {
   @override
@@ -11,7 +11,7 @@ class Tab2_1 extends StatelessWidget {
       padding: EdgeInsets.all(100),
       child: Column(
         children: [
-          RaisedButtonCustomWidget(
+          RaisedButtonWidget(
             icon: Icons.list,
             text: "oi",
             onPressed: () => ConfirmModal(

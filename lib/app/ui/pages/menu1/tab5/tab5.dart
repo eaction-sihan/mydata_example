@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab5/tab5_1.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab5/writing/writting.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:getx_pattern/app/ui/widgets/button/outlined_button_widget.dart';
 import 'package:getx_pattern/app/ui/widgets/button/raised_button_widget.dart';
 import 'package:getx_pattern/app/ui/widgets/image/image_container.dart';
 import 'package:getx_pattern/app/ui/widgets/tab/myinfo_tab.dart';
-import 'package:getx_pattern/app/ui/widgets/tab/top_tab.dart';
+
 
 class Tab5 extends StatelessWidget {
   @override
@@ -60,7 +61,7 @@ class Tab5 extends StatelessWidget {
                         SizedBox(width: 10),
                         OutlinedButtonWidget(
                           text: "WRITING",
-                          onPressed: () {},
+                          onPressed: () => Get.to(Menu1Tab5Writing()),
                         ),
                         SizedBox(width: 10),
                         OutlinedButtonWidget(
@@ -70,7 +71,6 @@ class Tab5 extends StatelessWidget {
                         SizedBox(width: 10),
                         RaisedButtonWidget(
                           text: "PICK",
-                          borderColor: fPrimaryColor,
                           onPressed: () {},
                         ),
                       ],

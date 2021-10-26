@@ -6,6 +6,9 @@ import 'package:getx_pattern/app/ui/pages/common/search_page.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 
 class AppBar2 extends StatelessWidget with PreferredSizeWidget {
+  final String title;
+
+  AppBar2({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +17,7 @@ class AppBar2 extends StatelessWidget with PreferredSizeWidget {
           border: Border(bottom: BorderSide(width: 0.3, color: Colors.grey)),
           color: Colors.white),
       child: AppBar(
-          title: Text('oi'.tr, style: textTheme().headline1),
+          title: Text(title, style: textTheme().headline1),
           centerTitle: true,
           actions: <Widget>[
             IconButton(

@@ -18,62 +18,66 @@ class ListType1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: GetBuilder<ListType1Controller>(builder: (_) {
-      return ListView.separated(
-        controller: c.scrollController,
-        itemBuilder: (_, index) {
-          if (index < c.postList.length) {
-            // 값이 있는 경우
-            if(type == "type1") {
-              return Container(
-                child: Column(
-                  children: [
-                    _buildTop(index),
-                    _buildWriting(index),
-                    _buildType(index),
-                    _buildWriter(index),
-                    _buildImage(index),
-                    // Divider(height: 1, thickness: 1, color: Colors.grey[300]),
-                    _buildTail(index),
-                  ],
-                ),
-              );
-            } else {
-              return Container(
-                // child: Column(
-                //   children: [
-                //     _buildTop(index),
-                //     _buildWriting(index),
-                //     _buildType(index),
-                //     _buildWriter(index),
-                //
-                //     _buildTail(index),
-                //   ],
-                // ),
-              );
-            }
+    return Container(
+      child: GetBuilder<ListType1Controller>(
+          builder: (_) {
+          return ListView.separated(
+            controller: c.scrollController,
+            itemBuilder: (_, index) {
+              if (index < c.postList.length) {
+                // 값이 있는 경우
+                if(type == "type1") {
+                  return Container(
+                    child: Column(
+                      children: [
+                        _buildTop(index),
+                        _buildWriting(index),
+                        _buildType(index),
+                        _buildWriter(index),
+                        _buildImage(index),
+                        // Divider(height: 1, thickness: 1, color: Colors.grey[300]),
+                        _buildTail(index),
+                      ],
+                    ),
+                  );
+                } else {
+                  return Container(
+                    // child: Column(
+                    //   children: [
+                    //     _buildTop(index),
+                    //     _buildWriting(index),
+                    //     _buildType(index),
+                    //     _buildWriter(index),
+                    //
+                    //     _buildTail(index),
+                    //   ],
+                    // ),
+                  );
+                }
 
-          } else {
-            // 값이 없는 경우
-            if (c.hasMore || c.isLoading) {
-              // 리스트의 끝이 아닌 경우
-              return LoadingWidget();
-            } else {
-              // 리스트의 끝인 경우
-              return LastListBtn(onPressed: () {
-                c.reload();
-              });
-            }
-          }
-        },
-        separatorBuilder: (_, index) => Divider(
-          height: 1,
-          thickness: 1,
-          color: Colors.grey[300],
-        ),
-        itemCount: c.postList.length + 1,
-      );
-    }));
+              } else {
+                // 값이 없는 경우
+                if (c.hasMore || c.isLoading) {
+                  // 리스트의 끝이 아닌 경우
+                  return LoadingWidget();
+                } else {
+                  // 리스트의 끝인 경우
+                  return LastListBtn(onPressed: () {
+                    c.reload();
+                  });
+                }
+              }
+            },
+            separatorBuilder: (_, index) => Divider(
+              height: 1,
+              thickness: 1,
+              color: Colors.grey[300],
+            ),
+            itemCount: c.postList.length + 1,
+          );
+        }
+      )
+    );
   }
 
   Padding _buildTop(index) {

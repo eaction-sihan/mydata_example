@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_pattern/app/controller/menu1/details_controller.dart';
+import 'package:getx_pattern/app/controller/menu2/menu2_main_controller.dart';
 import 'package:getx_pattern/app/ui/widgets/appbar/app_bar2.dart';
 import 'package:getx_pattern/app/ui/widgets/dialog/alert.dart';
 import 'package:getx_pattern/app/ui/widgets/etc/loading_widget.dart';
@@ -9,12 +9,12 @@ import 'package:getx_pattern/app/ui/widgets/menu/left_menu.dart';
 class Menu2Main extends StatelessWidget {
   @override
   Widget build(context) {
-    final DetailsController c = Get.put(DetailsController());
+    final Menu2MainController c = Get.put(Menu2MainController());
 
     return Scaffold(
       appBar: AppBar2(),
       drawer: LeftMenu1(),
-      body: GetBuilder<DetailsController>(
+      body: GetBuilder<Menu2MainController>(
         builder: (_) {
           return Padding(
             padding: const EdgeInsets.all(5.0),

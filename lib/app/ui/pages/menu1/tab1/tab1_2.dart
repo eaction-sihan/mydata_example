@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:getx_pattern/app/controller/menu1/menu1_tab2_controller.dart';
+import 'package:getx_pattern/app/data/model/sales_data.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
 
 class Tab1_2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<_SalesData> data = [
-      _SalesData('Jan', 35),
-      _SalesData('Feb', 28),
-      _SalesData('Mar', 34),
-      _SalesData('Apr', 32),
-      _SalesData('May', 40)
-    ];
+    Menu1Tab2Controller c = Get.put(Menu1Tab2Controller());
 
     return Scaffold(
         body: Column(children: [
@@ -26,11 +22,11 @@ class Tab1_2 extends StatelessWidget {
               legend: Legend(isVisible: true),
               // Enable tooltip
               tooltipBehavior: TooltipBehavior(enable: true),
-              series: <ChartSeries<_SalesData, String>>[
-                BarSeries<_SalesData, String>(
-                    dataSource: data,
-                    xValueMapper: (_SalesData sales, _) => sales.year,
-                    yValueMapper: (_SalesData sales, _) => sales.sales,
+              series: <ChartSeries<SalesData, String>>[
+                BarSeries<SalesData, String>(
+                    dataSource: c.datas,
+                    xValueMapper: (SalesData sales, _) => sales.year,
+                    yValueMapper: (SalesData sales, _) => sales.sales,
                     name: 'Sales',
                     // Enable data label
                     dataLabelSettings: DataLabelSettings(isVisible: true))

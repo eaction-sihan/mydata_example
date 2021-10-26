@@ -1,7 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_pattern/app/controller/menu1/main_controller.dart';
+import 'package:getx_pattern/app/controller/common/main_controller.dart';
 import 'package:getx_pattern/app/ui/pages/common/search_page.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 

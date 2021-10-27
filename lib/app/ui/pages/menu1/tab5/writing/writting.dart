@@ -21,7 +21,7 @@ class Menu1Tab5Writing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Menu1Tab5WritingController c = Get.put(Menu1Tab5WritingController());
-    c.curPage = 0;
+    c.onInit();
 
     return Scaffold(
         appBar: AppBar2(title: _title),

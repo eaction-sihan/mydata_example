@@ -31,7 +31,7 @@ class ToggleType1 extends StatelessWidget {
       selectedBorderColor: fPrimaryColor,
       fillColor: Colors.white,
       borderRadius: borderRadius,
-      textStyle: GoogleFonts.nanumGothic(fontSize: 15.0),
+      textStyle: GoogleFonts.nanumGothic(fontSize: 14.0),
       children: List.generate(this.texts.length,(index){
         return Container(
           alignment: Alignment.center,

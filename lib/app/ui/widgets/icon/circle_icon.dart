@@ -35,7 +35,7 @@ class CircleIcon extends StatelessWidget {
           SizedBox(height: 5),
           Text(
             this.title,
-            style: textTheme().bodyText1,
+            style: textTheme().bodyText2,
           )
         ],
       );
@@ -57,7 +57,7 @@ class CircleIcon extends StatelessWidget {
           SizedBox(height: 5),
           Text(
             this.title,
-            style: textTheme().bodyText1,
+            style: textTheme().bodyText2,
           )
         ],
       );

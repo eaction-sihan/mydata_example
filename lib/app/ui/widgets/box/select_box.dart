@@ -12,7 +12,7 @@ class SelectBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-        vertical: 12,
+        vertical: 14,
         horizontal: 16,
       ),
       margin: EdgeInsets.symmetric(

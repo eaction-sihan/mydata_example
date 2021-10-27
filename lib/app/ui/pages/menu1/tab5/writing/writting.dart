@@ -4,7 +4,9 @@ import 'package:getx_pattern/app/controller/menu1/menu1_tab5_wrting_controller.d
 import 'package:getx_pattern/app/ui/pages/menu1/tab5/writing/step1.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab5/writing/step2.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab5/writing/step3.dart';
+import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:getx_pattern/app/ui/widgets/appbar/app_bar2.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 /// This is the main application widget.
 class Menu1Tab5Writing extends StatelessWidget {
@@ -19,6 +21,8 @@ class Menu1Tab5Writing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Menu1Tab5WritingController c = Get.put(Menu1Tab5WritingController());
+    c.curPage = 0;
+
     return Scaffold(
         appBar: AppBar2(title: _title),
         body: GetBuilder<Menu1Tab5WritingController>(builder: (_) {
@@ -34,7 +38,7 @@ class Menu1Tab5Writing extends StatelessWidget {
                     },
                   ),
                 ),
-                getButton(c),
+                getButton(c, context),
               ],
             );
           }
@@ -42,7 +46,7 @@ class Menu1Tab5Writing extends StatelessWidget {
     );
   }
 
-  Container getButton(Menu1Tab5WritingController c) {
+  Container getButton(Menu1Tab5WritingController c, BuildContext context) {
     switch (c.curPage) {
       case 0:
         return Container(
@@ -52,9 +56,10 @@ class Menu1Tab5Writing extends StatelessWidget {
             children: <Widget>[
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.blue,
+                  primary: fPrimaryColor,
+                  minimumSize: Size(MediaQuery.of(context).size.width, 50)
                 ),
-                child: Text('Next'),
+                child: Text('NEXT', style: GoogleFonts.nanumGothic(fontSize: 16.0, color: Colors.white, fontWeight: FontWeight.bold),),
                 onPressed: () {
                   c.nextPage();
                 },
@@ -71,18 +76,20 @@ class Menu1Tab5Writing extends StatelessWidget {
             children: <Widget>[
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
+                    primary: Colors.black12,
+                    minimumSize: Size(MediaQuery.of(context).size.width/2, 50)
                 ),
-                child: Text('Prev'),
+                child: Text('PREV', style: GoogleFonts.nanumGothic(fontSize: 16.0, color: fPrimaryColor, fontWeight: FontWeight.bold),),
                 onPressed: () {
                   c.previousPage();
                 },
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.blue,
+                    primary: fPrimaryColor,
+                    minimumSize: Size(MediaQuery.of(context).size.width/2, 50)
                 ),
-                child: Text('Next'),
+                child: Text('NEXT', style: GoogleFonts.nanumGothic(fontSize: 16.0, color: Colors.white, fontWeight: FontWeight.bold),),
                 onPressed: () {
                   c.nextPage();
                 },

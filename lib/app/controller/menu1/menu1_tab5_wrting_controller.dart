@@ -13,7 +13,11 @@ class Menu1Tab5WritingController extends GetxController {
 
   double currentSlider1 = 20;
   bool isChecked = false;
-  List<bool> selections1 = List.generate(3, (index) => false);
+  List<bool> selections1 = [true, false];
+  List<bool> selections2_1 = [true, false, false];
+  List<bool> selections2_2 = List.generate(3, (index) => false);
+  List<bool> selections2_3 = List.generate(2, (index) => false);
+  List<bool> selections3 = [true, false, false];
   String dropdownValue1 = 'One';
 
   @override

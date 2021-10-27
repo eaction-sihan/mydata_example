@@ -20,10 +20,10 @@ class AppBar2 extends StatelessWidget with PreferredSizeWidget {
           title: Text(title, style: textTheme().headline1),
           centerTitle: true,
           actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.search), // 검색 아이콘 생성
-              onPressed: () => Get.to(SearchPage()),
-            ),
+            // IconButton(
+            //   icon: Icon(Icons.search), // 검색 아이콘 생성
+            //   onPressed: () => Get.to(SearchPage()),
+            // ),
             Badge(
               position: BadgePosition.topEnd(top: 3, end: 6),
               shape: BadgeShape.square,

@@ -18,7 +18,7 @@ class Tab1 extends StatelessWidget {
         children: <Widget>[
           Container(
             alignment: Alignment.centerLeft,
-            padding: EdgeInsets.only(top: 16, bottom: 16, left: 16, right: 16),
+            padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
                 border:
                     Border(bottom: BorderSide(width: 0.6, color: Colors.grey)),

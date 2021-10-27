@@ -12,7 +12,7 @@ class Menu2Main extends StatelessWidget {
     final Menu2MainController c = Get.put(Menu2MainController());
 
     return Scaffold(
-      appBar: AppBar2(title: 'oi'.tr),
+      appBar: AppBar2(title: '안녕하세요 test'.tr),
       drawer: LeftMenu1(),
       body: GetBuilder<Menu2MainController>(
         builder: (_) {

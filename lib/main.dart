@@ -13,7 +13,7 @@ void main() {
     defaultTransition: Transition.fade,
     getPages: AppPages.pages,
     locale: Get.deviceLocale,
-    fallbackLocale: Locale('en', 'US'),
+    fallbackLocale: Locale('ko', 'KR'),
     translationsKeys: AppTranslation.translations,
   ));
 }

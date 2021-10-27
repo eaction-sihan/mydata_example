@@ -1,3 +1,3 @@
 final Map<String, String> ptBR = {
-  'oi' : 'oi'
+  '안녕하세요 test' : 'oi'
 };

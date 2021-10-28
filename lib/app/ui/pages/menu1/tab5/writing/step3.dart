@@ -9,7 +9,7 @@ class Menu1Tab5WritingStep3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> categories = ["골라주세요!", "어떻게생각해?", "당신의점수는?"];
-    List<IconData> categories_icon = [Icons.food_bank, Icons.whatshot, Icons.airplanemode_active];
+    List<String> categories_icon = ["images/icon_vs.png", "images/icon_q.png", "images/icon_per.png"];
     List<String> texts = ["햄릿증후군", "의견이 궁금해", "국민심사의원"];
 
     Menu1Tab5WritingController c = Get.put(Menu1Tab5WritingController());

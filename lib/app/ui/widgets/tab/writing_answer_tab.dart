@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class WritingAnswerTab extends StatelessWidget {
   List<String> categories;
-  List<IconData> categories_icon;
+  List<String> categories_icon;
   List<String> texts;
 
   WritingAnswerTab(
@@ -35,10 +35,16 @@ class WritingAnswerTab extends StatelessWidget {
               child: Column(children: [
                 new Align(
                     alignment: Alignment.centerLeft,
-                    child: Icon(
-                      categories_icon[index],
-                      size: 26,
-                    )),
+                    child: Container(
+                      child: Image(
+                        image: AssetImage(
+                          categories_icon[index],
+                        ),
+                        fit: BoxFit.cover,
+                      ),
+                      height: 26,
+                      width: 26,
+                    ),),
                 SizedBox(
                   height: 20,
                 ),

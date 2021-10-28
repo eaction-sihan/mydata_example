@@ -146,7 +146,7 @@ class Menu1Tab5Writing extends StatelessWidget {
                     minimumSize:
                     Size(MediaQuery.of(context).size.width / 2, 50)),
                 child: Text(
-                  'SAVE',
+                  'SAVE & PREVIEW',
                   style: GoogleFonts.nanumGothic(
                       fontSize: 16.0,
                       color: Colors.white,

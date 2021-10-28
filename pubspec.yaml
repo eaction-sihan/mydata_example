@@ -37,8 +37,8 @@ dependencies:
   google_fonts: ^2.0.0
   get:
   http:
-  badges:
-  syncfusion_flutter_charts:
+  badges: ^2.0.1
+  syncfusion_flutter_charts: ^19.3.47
   font_awesome_flutter: ^9.0.0
 
 dev_dependencies:

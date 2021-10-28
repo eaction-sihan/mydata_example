@@ -26,24 +26,26 @@ class Menu1Tab5Writing extends StatelessWidget {
     return Scaffold(
         appBar: AppBar2(title: _title),
         body: GetBuilder<Menu1Tab5WritingController>(builder: (_) {
-            return Column(
-              children: <Widget>[
-                Flexible(
-                  child: PageView.builder(
-                    physics:new NeverScrollableScrollPhysics(),
-                    controller: c.pageController,
-                    itemCount: _stepPages.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return _stepPages[index % _stepPages.length];
-                    },
+          return GestureDetector(
+              onTap: () {
+                FocusScope.of(context).unfocus();
+              },
+              child: Column(
+                children: <Widget>[
+                  Flexible(
+                    child: PageView.builder(
+                      physics: new NeverScrollableScrollPhysics(),
+                      controller: c.pageController,
+                      itemCount: _stepPages.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return _stepPages[index % _stepPages.length];
+                      },
+                    ),
                   ),
-                ),
-                getButton(c, context),
-              ],
-            );
-          }
-        )
-    );
+                  getButton(c, context),
+                ],
+              ));
+        }));
   }
 
   Container getButton(Menu1Tab5WritingController c, BuildContext context) {
@@ -56,10 +58,15 @@ class Menu1Tab5Writing extends StatelessWidget {
             children: <Widget>[
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: fPrimaryColor,
-                  minimumSize: Size(MediaQuery.of(context).size.width, 50)
+                    primary: fPrimaryColor,
+                    minimumSize: Size(MediaQuery.of(context).size.width, 50)),
+                child: Text(
+                  'NEXT',
+                  style: GoogleFonts.nanumGothic(
+                      fontSize: 16.0,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
                 ),
-                child: Text('NEXT', style: GoogleFonts.nanumGothic(fontSize: 16.0, color: Colors.white, fontWeight: FontWeight.bold),),
                 onPressed: () {
                   c.nextPage();
                 },
@@ -77,9 +84,15 @@ class Menu1Tab5Writing extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     primary: Colors.black12,
-                    minimumSize: Size(MediaQuery.of(context).size.width/2, 50)
+                    minimumSize:
+                        Size(MediaQuery.of(context).size.width / 2, 50)),
+                child: Text(
+                  'PREV',
+                  style: GoogleFonts.nanumGothic(
+                      fontSize: 16.0,
+                      color: fTextColor,
+                      fontWeight: FontWeight.bold),
                 ),
-                child: Text('PREV', style: GoogleFonts.nanumGothic(fontSize: 16.0, color: fPrimaryColor, fontWeight: FontWeight.bold),),
                 onPressed: () {
                   c.previousPage();
                 },
@@ -87,9 +100,15 @@ class Menu1Tab5Writing extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     primary: fPrimaryColor,
-                    minimumSize: Size(MediaQuery.of(context).size.width/2, 50)
+                    minimumSize:
+                        Size(MediaQuery.of(context).size.width / 2, 50)),
+                child: Text(
+                  'NEXT',
+                  style: GoogleFonts.nanumGothic(
+                      fontSize: 16.0,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
                 ),
-                child: Text('NEXT', style: GoogleFonts.nanumGothic(fontSize: 16.0, color: Colors.white, fontWeight: FontWeight.bold),),
                 onPressed: () {
                   c.nextPage();
                 },

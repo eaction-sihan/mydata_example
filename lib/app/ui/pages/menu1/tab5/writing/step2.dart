@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/menu1/menu1_tab5_wrting_controller.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
+import 'package:getx_pattern/app/ui/widgets/toggle/toggle_type3.dart';
 import 'package:getx_pattern/app/ui/widgets/dropdown/dropdown_box.dart';
 
 class Menu1Tab5WritingStep2 extends StatelessWidget {
@@ -57,6 +59,39 @@ class Menu1Tab5WritingStep2 extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.centerLeft,
+              padding: EdgeInsets.symmetric(
+                horizontal: 16,
+              ),
+              child: ToggleType3(
+                selections: c.selections4,
+                texts: ['이미지', '영상'],
+                icons: [FontAwesomeIcons.image, FontAwesomeIcons.photoVideo],
+                onPressed: (index) {
+                  for (int i = 0; i < c.selections4.length; i++) {
+                    c.selections4[i] = i == index;
+                  }
+                  c.update();
+
+                },
+              )
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 16, right: 16, top: 14),
+              child: TextField(
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.zero,
+                  prefixIcon: Icon(Icons.link, size: 15),
+                  hintText: '영상 링크',
+                  hintStyle: textTheme().bodyText2,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(7),
+                    borderSide: BorderSide(color: Color(0xffbbbbbb), width: 0.6)
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              alignment: Alignment.centerLeft,
               padding: EdgeInsets.only(left: 18, top: 20, bottom: 10),
               child: Row(children: [
                 Text(
@@ -71,7 +106,7 @@ class Menu1Tab5WritingStep2 extends StatelessWidget {
                 horizontal: 16,
               ),
               child: TextField(
-                maxLines: 5,
+                maxLines: 4,
                 decoration: new InputDecoration(
                   border: new OutlineInputBorder(
                       borderRadius: BorderRadius.circular(7),
@@ -98,4 +133,5 @@ class Menu1Tab5WritingStep2 extends StatelessWidget {
       );
     });
   }
+
 }

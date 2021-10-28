@@ -21,13 +21,13 @@ class Menu1Tab5Writing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Menu1Tab5WritingController c = Get.put(Menu1Tab5WritingController());
-    c.onInit();
 
     return Scaffold(
         appBar: AppBar2(title: _title),
         body: GetBuilder<Menu1Tab5WritingController>(builder: (_) {
           return GestureDetector(
               onTap: () {
+                // 키보드 숨김
                 FocusScope.of(context).unfocus();
               },
               child: Column(
@@ -49,6 +49,7 @@ class Menu1Tab5Writing extends StatelessWidget {
   }
 
   Container getButton(Menu1Tab5WritingController c, BuildContext context) {
+    print("c.curPage : ${c.curPage}");
     switch (c.curPage) {
       case 0:
         return Container(
@@ -58,13 +59,13 @@ class Menu1Tab5Writing extends StatelessWidget {
             children: <Widget>[
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: fPrimaryColor,
+                    primary: fSecondaryColor,
                     minimumSize: Size(MediaQuery.of(context).size.width, 50)),
                 child: Text(
                   'NEXT',
                   style: GoogleFonts.nanumGothic(
                       fontSize: 16.0,
-                      color: Colors.white,
+                      color: fPrimaryColor,
                       fontWeight: FontWeight.bold),
                 ),
                 onPressed: () {
@@ -83,7 +84,7 @@ class Menu1Tab5Writing extends StatelessWidget {
             children: <Widget>[
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.black12,
+                    primary: Color(0XFFEAEAEA),
                     minimumSize:
                         Size(MediaQuery.of(context).size.width / 2, 50)),
                 child: Text(
@@ -99,14 +100,14 @@ class Menu1Tab5Writing extends StatelessWidget {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: fPrimaryColor,
+                    primary: fSecondaryColor,
                     minimumSize:
                         Size(MediaQuery.of(context).size.width / 2, 50)),
                 child: Text(
                   'NEXT',
                   style: GoogleFonts.nanumGothic(
                       fontSize: 16.0,
-                      color: Colors.white,
+                      color: fPrimaryColor,
                       fontWeight: FontWeight.bold),
                 ),
                 onPressed: () {
@@ -125,18 +126,32 @@ class Menu1Tab5Writing extends StatelessWidget {
             children: <Widget>[
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
+                    primary: Color(0XFFEAEAEA),
+                    minimumSize:
+                    Size(MediaQuery.of(context).size.width / 2, 50)),
+                child: Text(
+                  'PREV',
+                  style: GoogleFonts.nanumGothic(
+                      fontSize: 16.0,
+                      color: fTextColor,
+                      fontWeight: FontWeight.bold),
                 ),
-                child: Text('Prev'),
                 onPressed: () {
                   c.previousPage();
                 },
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.blue,
+                    primary: fPrimaryColor,
+                    minimumSize:
+                    Size(MediaQuery.of(context).size.width / 2, 50)),
+                child: Text(
+                  'SAVE',
+                  style: GoogleFonts.nanumGothic(
+                      fontSize: 16.0,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
                 ),
-                child: Text('Save'),
                 onPressed: () {
                   Get.back();
                 },

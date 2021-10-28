@@ -40,7 +40,7 @@ class Menu1Tab5WritingStep1 extends StatelessWidget {
               ),
               child: Row(children: [
                 Text(
-                  'Step.1 Target 설정',
+                  'Step.1  Target 설정',
                   style: textTheme().headline1,
                 ),
               ]),

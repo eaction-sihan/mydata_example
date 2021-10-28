@@ -13,193 +13,66 @@ class Menu1Tab5WritingStep3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      //padding: const EdgeInsets.all(8),
-      children: <Widget>[
-        Container(
-          color: Colors.white,
-          alignment: Alignment.centerLeft,
-          padding: EdgeInsets.symmetric(
-            vertical: 20,
-            horizontal: 16,
+    return Container(
+      color: Colors.white,
+      child: ListView(
+        //padding: const EdgeInsets.all(8),
+        children: <Widget>[
+          Container(
+            color: Colors.white,
+            alignment: Alignment.centerLeft,
+            padding: EdgeInsets.symmetric(
+              vertical: 20,
+              horizontal: 16,
+            ),
+            child: Row(children: [
+              Text(
+                'Step.3  질문 작성',
+                style: textTheme().headline1,
+              ),
+            ]),
           ),
-          child: Row(children: [
-            Text(
-              'Step.1 Target 설정',
-              style: textTheme().headline1,
-            ),
-          ]),
-        ),
-        Container(
-            color: Colors.white,
+          Container(
+            alignment: Alignment.centerLeft,
+            padding: EdgeInsets.only(left: 18, top: 10, bottom: 10),
+            child: Row(children: [
+              Text(
+                '질문작성',
+                style: textTheme().headline2,
+              ),
+            ]),
+          ),
+          Container(
             padding: EdgeInsets.symmetric(
               horizontal: 16,
             ),
-            alignment: Alignment.center,
-            child: ToggleType1(
-              selections: c.selections1,
-              texts: ['아젠다 공개', '아젠다 비공개'],
-              onPressed: (index) {
-                //c.selections1[index] = !c.selections1[index];
-                for (int i = 0; i < c.selections1.length; i++) {
-                  c.selections1[i] = i == index;
-                }
-                c.update();
-              },
-            )
-        ),
-        Container(
-          color: Colors.white,
-          alignment: Alignment.centerLeft,
-          padding: EdgeInsets.only(left: 18, top: 25, bottom: 10),
-          child: Row(children: [
-            Text(
-              '국가설정',
-              style: textTheme().headline2,
+            child: TextField(
+              decoration: InputDecoration(
+                contentPadding: EdgeInsets.only(left: 12),
+                hintText: 'Q.',
+                hintStyle: textTheme().bodyText2,
+                filled: true,
+                fillColor: Color(0XFFECEBFF),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(7),
+                    borderSide: BorderSide(color: fBorderColor, width: 0.6)
+                ),
+              ),
             ),
-          ]),
-        ),
-        SelectBox(title: '국가 선택 (최대 5개국)'),
-        Container(
-          color: Colors.white,
-          alignment: Alignment.centerLeft,
-          padding: EdgeInsets.only(left: 18, top: 25, bottom: 10),
-          child: Row(children: [
-            Text(
-              '연령설정',
-              style: textTheme().headline2,
-            ),
-          ]),
-        ),
-        Container(
-            color: Colors.white,
-            padding: EdgeInsets.symmetric(
-              horizontal: 16,
-            ),
-            alignment: Alignment.center,
-            child: Column(
-                children: [
-                  ToggleType1(
-                    selections: c.selections2_1,
-                    texts: ['전체선택', '10대', '20대'],
-                    type: 'top',
-                    onPressed: (index) {
-                      for (int i = 0; i < c.selections2_1.length; i++) {
-                        c.selections2_1[i] = i == index;
-                      }
-                      for (int i = 0; i < c.selections2_2.length; i++) {
-                        c.selections2_2[i] = false;
-                      }
-                      for (int i = 0; i < c.selections2_3.length; i++) {
-                        c.selections2_3[i] = false;
-                      }
-                      c.update();
-                    },
-                  ),
-                  ToggleType1(
-                    selections: c.selections2_2,
-                    texts: ['30대', '40대', '50대'],
-                    type: 'middle',
-                    onPressed: (index) {
-                      for (int i = 0; i < c.selections2_1.length; i++) {
-                        c.selections2_1[i] = false;
-                      }
-                      for (int i = 0; i < c.selections2_2.length; i++) {
-                        c.selections2_2[i] = i == index;
-                      }
-                      for (int i = 0; i < c.selections2_3.length; i++) {
-                        c.selections2_3[i] = false;
-                      }
-                      c.update();
-                    },
-                  ),
-                  ToggleType2(
-                    selections: c.selections2_3,
-                    texts: ['60대', '70대 이상'],
-                    type: 'bottom',
-                    onPressed: (index) {
-                      for (int i = 0; i < c.selections2_1.length; i++) {
-                        c.selections2_1[i] = false;
-                      }
-                      for (int i = 0; i < c.selections2_2.length; i++) {
-                        c.selections2_2[i] = false;
-                      }
-                      for (int i = 0; i < c.selections2_3.length; i++) {
-                        c.selections2_3[i] = i == index;
-                      }
-                      c.update();
-                    },
-                  ),
-                ]
-            )
-        ),
-        Container(
-          color: Colors.white,
-          alignment: Alignment.centerLeft,
-          padding: EdgeInsets.only(left: 18, top: 25, bottom: 10),
-          child: Row(children: [
-            Text(
-              '성별설정',
-              style: textTheme().headline2,
-            ),
-          ]),
-        ),
-        Container(
-            color: Colors.white,
-            padding: EdgeInsets.symmetric(
-              horizontal: 16,
-            ),
-            alignment: Alignment.center,
-            child: ToggleType1(
-              selections: c.selections3,
-              texts: ['전체선택', '남성', '여성'],
-              onPressed: (index) {
-                //c.selections1[index] = !c.selections1[index];
-                for (int i = 0; i < c.selections3.length; i++) {
-                  c.selections3[i] = i == index;
-                }
-                c.update();
-              },
-            )
-        ),
+          ),
+          Container(
+            alignment: Alignment.centerLeft,
+            padding: EdgeInsets.only(left: 18, top: 25, bottom: 10),
+            child: Row(children: [
+              Text(
+                '답변유형',
+                style: textTheme().headline2,
+              ),
+            ]),
+          ),
 
-        Container(
-          color: Colors.white,
-          height: 50,
-          child: DropdownButton<String>(
-            value: c.dropdownValue1,
-            icon: const Icon(Icons.arrow_downward),
-            iconSize: 24,
-            elevation: 16,
-            onChanged: (String? newValue) {
-              c.dropdownValue1 = newValue!;
-              c.update();
-            },
-            items: <String>['One', 'Two', 'Free', 'Four']
-                .map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-          ),
-        ),
-        Container(
-          color: Colors.white,
-          height: 50,
-          child: Slider(
-            value: c.currentSlider1,
-            min: 0,
-            max: 100,
-            divisions: 5,
-            label: c.currentSlider1.round().toString(),
-            onChanged: (double value) {
-              c.currentSlider1 = value;
-              c.update();
-            },
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

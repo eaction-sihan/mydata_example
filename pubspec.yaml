@@ -40,6 +40,7 @@ dependencies:
   badges: ^2.0.1
   syncfusion_flutter_charts: ^19.3.47
   font_awesome_flutter: ^9.0.0
+  custom_radio_grouped_button: ^2.1.1
 
 dev_dependencies:
   flutter_test:

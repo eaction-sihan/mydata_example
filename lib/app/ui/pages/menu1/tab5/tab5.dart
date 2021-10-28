@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_pattern/app/controller/menu1/menu1_tab5_wrting_controller.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab5/tab5_1.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab5/writing/writting.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
@@ -14,6 +15,8 @@ class Tab5 extends StatelessWidget {
   Widget build(BuildContext context) {
     List<String> categories = ["맛집", "핫딜", "여행", "쿠폰", "아젠다", "트렌드", "라이프"];
     List<IconData> categories_icon = [Icons.food_bank, Icons.whatshot, Icons.airplanemode_active, Icons.money_sharp, Icons.view_agenda, Icons.stacked_bar_chart, Icons.nightlife];
+
+    Menu1Tab5WritingController c = Get.put(Menu1Tab5WritingController());
 
     return DefaultTabController(
       length: categories.length,
@@ -61,7 +64,10 @@ class Tab5 extends StatelessWidget {
                         SizedBox(width: 10),
                         OutlinedButtonWidget(
                           text: "WRITING",
-                          onPressed: () => Get.to(Menu1Tab5Writing()),
+                          onPressed: () {
+                            c.onInit();
+                            Get.to(Menu1Tab5Writing());
+                          }
                         ),
                         SizedBox(width: 10),
                         OutlinedButtonWidget(

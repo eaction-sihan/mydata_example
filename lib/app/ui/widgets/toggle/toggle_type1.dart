@@ -26,10 +26,11 @@ class ToggleType1 extends StatelessWidget {
     }
 
     return ToggleButtons(
-      color: Colors.black54,
+      color: fTextColor,
       selectedColor: fPrimaryColor,
       selectedBorderColor: fPrimaryColor,
       fillColor: Colors.white,
+      borderColor: fBorderColor,
       borderRadius: borderRadius,
       textStyle: GoogleFonts.nanumGothic(fontSize: 14.0),
       children: List.generate(this.texts.length,(index){

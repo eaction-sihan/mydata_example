@@ -18,9 +18,10 @@ class ToggleType3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ToggleButtons(
-      color: Colors.black54,
+      color: fBorderColor,
       selectedColor: fPrimaryColor,
       selectedBorderColor: fPrimaryColor,
+      borderColor: fBorderColor,
       fillColor: Colors.white,
       borderRadius: BorderRadius.circular(7),
       textStyle: textTheme().bodyText2,

@@ -1,8 +1,10 @@
+import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/menu1/menu1_tab5_wrting_controller.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
+import 'package:getx_pattern/app/ui/widgets/radio/custom_radio.dart';
 import 'package:getx_pattern/app/ui/widgets/toggle/toggle_type3.dart';
 import 'package:getx_pattern/app/ui/widgets/dropdown/dropdown_box.dart';
 
@@ -25,7 +27,7 @@ class Menu1Tab5WritingStep2 extends StatelessWidget {
               ),
               child: Row(children: [
                 Text(
-                  'Step.2 Agenda 작성',
+                  'Step.2  Agenda 작성',
                   style: textTheme().headline1,
                 ),
               ]),
@@ -85,7 +87,7 @@ class Menu1Tab5WritingStep2 extends StatelessWidget {
                   hintStyle: textTheme().bodyText2,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(7),
-                    borderSide: BorderSide(color: Color(0xffbbbbbb), width: 0.6)
+                    borderSide: BorderSide(color: fBorderColor, width: 0.6)
                   ),
                 ),
               ),
@@ -111,7 +113,7 @@ class Menu1Tab5WritingStep2 extends StatelessWidget {
                   border: new OutlineInputBorder(
                       borderRadius: BorderRadius.circular(7),
                       borderSide: new BorderSide(
-                        color: Color(0xffbbbbbb),
+                        color: fBorderColor,
                         width: 0.6,
                       )
                   ),
@@ -127,6 +129,19 @@ class Menu1Tab5WritingStep2 extends StatelessWidget {
                   style: textTheme().headline2,
                 ),
               ]),
+            ),
+            Container(
+              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.symmetric(
+                horizontal: 16,
+              ),
+              child: CustomRadio(
+                labels: ['1','2','3','4','5'],
+                values: ['1','2','3','4','5'],
+                onPressed: (value) {
+                  print(value);
+                },
+              ),
             ),
           ],
         ),

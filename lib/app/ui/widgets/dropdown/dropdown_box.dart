@@ -22,7 +22,7 @@ class DropdownBox extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(
-          color: Color(0xffbbbbbb),
+          color: fBorderColor,
           width: 0.6,
         ),
         borderRadius: BorderRadius.circular(7),

@@ -54,7 +54,7 @@ class Menu1Tab5WritingStep3 extends StatelessWidget {
                 filled: true,
                 fillColor: Color(0XFFECEBFF),
                 border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(7),
+                    borderRadius: BorderRadius.circular(5),
                     borderSide: BorderSide(color: fBorderColor, width: 0.6)
                 ),
               ),

@@ -21,7 +21,7 @@ class CustomRadio extends StatelessWidget {
     } else if(this.type == 'middle') {
       borderRadius = null;
     } else {
-      borderRadius = BorderRadius.circular(7);
+      borderRadius = BorderRadius.circular(5);
     }
 
     return CustomRadioButton(

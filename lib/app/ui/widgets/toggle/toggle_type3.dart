@@ -23,7 +23,7 @@ class ToggleType3 extends StatelessWidget {
       selectedBorderColor: fPrimaryColor,
       borderColor: fBorderColor,
       fillColor: Colors.white,
-      borderRadius: BorderRadius.circular(7),
+      borderRadius: BorderRadius.circular(5),
       textStyle: textTheme().bodyText2,
       children: List.generate(this.texts.length, (index) {
         return Container(

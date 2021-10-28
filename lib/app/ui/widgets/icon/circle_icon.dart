@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class CircleIcon extends StatelessWidget {
@@ -32,10 +33,10 @@ class CircleIcon extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          SizedBox(height: 5),
+          SizedBox(height: 8),
           Text(
             this.title,
-            style: textTheme().bodyText2,
+            style: GoogleFonts.nanumGothic(fontSize: 13.0, color: fTextColor),
           )
         ],
       );
@@ -54,10 +55,10 @@ class CircleIcon extends StatelessWidget {
               color: fPrimaryColor,
             ),
           ),
-          SizedBox(height: 5),
+          SizedBox(height: 8),
           Text(
             this.title,
-            style: textTheme().bodyText2,
+            style: GoogleFonts.nanumGothic(fontSize: 13.0, color: fTextColor),
           )
         ],
       );

@@ -86,7 +86,7 @@ class Menu1Tab5WritingStep2 extends StatelessWidget {
                   hintText: '영상 링크',
                   hintStyle: textTheme().bodyText2,
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(7),
+                    borderRadius: BorderRadius.circular(5),
                     borderSide: BorderSide(color: fBorderColor, width: 0.6)
                   ),
                 ),
@@ -111,7 +111,7 @@ class Menu1Tab5WritingStep2 extends StatelessWidget {
                 maxLines: 4,
                 decoration: new InputDecoration(
                   border: new OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(7),
+                      borderRadius: BorderRadius.circular(5),
                       borderSide: new BorderSide(
                         color: fBorderColor,
                         width: 0.6,

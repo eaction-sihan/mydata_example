@@ -25,7 +25,7 @@ class DropdownBox extends StatelessWidget {
           color: fBorderColor,
           width: 0.6,
         ),
-        borderRadius: BorderRadius.circular(7),
+        borderRadius: BorderRadius.circular(5),
       ),
       child: DropdownButton<String>(
         underline: SizedBox(),

@@ -11,7 +11,7 @@ class Menu1Tab5WritingController extends GetxController {
   PageController pageController = PageController(initialPage: 0);
   int curPage = 0;
 
-  double currentSlider1 = 20;
+  double currentSlider1 = 0;
   bool isChecked = false;
   List<bool> selections1 = [true, false];
   List<bool> selections2_1 = [true, false, false];
@@ -19,6 +19,7 @@ class Menu1Tab5WritingController extends GetxController {
   List<bool> selections2_3 = List.generate(2, (index) => false);
   List<bool> selections3 = [true, false, false];
   List<bool> selections4 = [false, false];
+  List<bool> selections5 = [true, false];
   String dropdownValue1 = '카테고리 설정';
   List<String> dropdownList1 = ['카테고리 설정', '사회', '경제', '문화/연예', '제품', '건강', '기타'];
 

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/menu1/menu1_tab5_wrting_controller.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab5/writing/step3_1.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab5/writing/step3_2.dart';
+import 'package:getx_pattern/app/ui/pages/menu1/tab5/writing/step3_3.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:getx_pattern/app/ui/widgets/tab/writing_answer_tab.dart';
 
@@ -79,14 +81,8 @@ class Menu1Tab5WritingStep3 extends StatelessWidget {
                 padding: EdgeInsets.only(top: 20),
                 child: TabBarView(children: [
                   Menu1Tab5WritingStep3_1(),
-                  Container(
-                      child: Center(
-                        child: Text('${categories[1]}'),
-                      )),
-                  Container(
-                      child: Center(
-                        child: Text('${categories[2]}'),
-                      )),
+                  Menu1Tab5WritingStep3_2(),
+                  Menu1Tab5WritingStep3_3(),
                 ]),
               ),
             )

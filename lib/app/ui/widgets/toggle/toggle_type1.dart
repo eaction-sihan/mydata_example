@@ -8,9 +8,10 @@ class ToggleType1 extends StatelessWidget {
   final List<String> texts;
   Function(int value) onPressed;
   final String? type;
+  int? size;
 
   ToggleType1(
-      {required this.selections, required this.texts, required this.onPressed, this.type});
+      {required this.selections, required this.texts, required this.onPressed, this.type, this.size});
 
   @override
   Widget build(BuildContext context) {
@@ -47,8 +48,10 @@ class ToggleType1 extends StatelessWidget {
 
   double _buttonWidth(BuildContext context) {
     final buttonCount = this.texts.length;
-
-    final width = (MediaQuery.of(context).size.width - 38) / buttonCount;
+    if(this.size == null) {
+      this.size = 38;
+    }
+    final width = (MediaQuery.of(context).size.width - this.size!) / buttonCount;
     return width;
   }
 }

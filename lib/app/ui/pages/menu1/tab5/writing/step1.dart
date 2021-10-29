@@ -179,7 +179,8 @@ class Menu1Tab5WritingStep1 extends StatelessWidget {
                     }
                     c.update();
                   },
-                )),
+                )
+            ),
           ],
         ),
       );

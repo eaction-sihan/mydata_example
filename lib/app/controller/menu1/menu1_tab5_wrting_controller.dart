@@ -11,21 +11,32 @@ class Menu1Tab5WritingController extends GetxController {
   PageController pageController = PageController(initialPage: 0);
   int curPage = 0;
 
-  double currentSlider1 = 0;
-  bool isChecked = false;
-  List<bool> selections1 = [true, false];
-  List<bool> selections2_1 = [true, false, false];
-  List<bool> selections2_2 = List.generate(3, (index) => false);
-  List<bool> selections2_3 = List.generate(2, (index) => false);
-  List<bool> selections3 = [true, false, false];
-  List<bool> selections4 = [false, false];
-  List<bool> selections5 = [true, false];
-  String dropdownValue1 = '카테고리 설정';
-  List<String> dropdownList1 = ['카테고리 설정', '사회', '경제', '문화/연예', '제품', '건강', '기타'];
+  late double currentSlider1;
+  late bool isChecked;
+  late List<bool> selections1;
+  late List<bool> selections2_1;
+  late List<bool> selections2_2;
+  late List<bool> selections2_3;
+  late List<bool> selections3;
+  late List<bool> selections4;
+  late List<bool> selections5;
+  late String dropdownValue1;
+  late List<String> dropdownList1;
 
   @override
   void onInit() {
     curPage = 0;
+    currentSlider1 = 0;
+    isChecked = false;
+    selections1 = [true, false];
+    selections2_1 = [true, false, false];
+    selections2_2 = List.generate(3, (index) => false);
+    selections2_3 = List.generate(2, (index) => false);
+    selections3 = [true, false, false];
+    selections4 = [false, false];
+    selections5 = [true, false];
+    dropdownValue1 = '카테고리 설정';
+    dropdownList1 = ['카테고리 설정', '사회', '경제', '문화/연예', '제품', '건강', '기타'];
     super.onInit();
   }
 

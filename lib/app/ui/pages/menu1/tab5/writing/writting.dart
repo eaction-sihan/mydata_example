@@ -30,20 +30,22 @@ class Menu1Tab5Writing extends StatelessWidget {
                 // 키보드 숨김
                 FocusScope.of(context).unfocus();
               },
-              child: Column(
-                children: <Widget>[
-                  Flexible(
-                    child: PageView.builder(
-                      physics: new NeverScrollableScrollPhysics(),
-                      controller: c.pageController,
-                      itemCount: _stepPages.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return _stepPages[index % _stepPages.length];
-                      },
+              child: SafeArea(
+                child: Column(
+                  children: <Widget>[
+                    Flexible(
+                      child: PageView.builder(
+                        physics: new NeverScrollableScrollPhysics(),
+                        controller: c.pageController,
+                        itemCount: _stepPages.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return _stepPages[index % _stepPages.length];
+                        },
+                      ),
                     ),
-                  ),
-                  getButton(c, context),
-                ],
+                    getButton(c, context),
+                  ],
+                ),
               ));
         }));
   }

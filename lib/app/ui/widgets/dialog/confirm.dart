@@ -4,49 +4,42 @@ import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 
 class ConfirmModal {
   String title;
-  String? midleText;
-  final VoidCallback? onPressed;
 
   ConfirmModal({
-    required this.title,
-    this.midleText,
-    this.onPressed,
+    required this.title
   });
 
-  void show() {
-    if (midleText == null) {
-      midleText = "";
-    }
-
-    Get.defaultDialog(
-      title: title,
-      titleStyle: textTheme().headline2,
-      radius: 15.0,
-      middleText: midleText!,
-      actions: [
-        ElevatedButton(
-          onPressed: () {
-            Get.back();
-          },
-          child: Text(
-            "Cancel",
-            style: TextStyle(color: fTextColor),
-          ),
-          style: ElevatedButton.styleFrom(
-            primary: Colors.white,
-          ),
-        ),
-        ElevatedButton(
-          onPressed: this.onPressed,
-          child: Text(
-            "OK",
-            style: TextStyle(color: Colors.white),
-          ),
-          style: ElevatedButton.styleFrom(
-            primary: fPrimaryColor,
-          ),
-        )
-      ],
+  Future<bool?> show(context) async {
+    bool? result = await showDialog(
+        context: context,
+        builder: (_) {
+          return AlertDialog(
+            title: Text(title),
+            actions: [
+              ElevatedButton(
+                onPressed: () => Navigator.pop(context, false), // passing false
+                child: Text(
+                  "Cancel",
+                  style: TextStyle(color: fTextColor),
+                ),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.white,
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () => Navigator.pop(context, true), // passing true
+                child: Text(
+                  "OK",
+                  style: TextStyle(color: Colors.white),
+                ),
+                style: ElevatedButton.styleFrom(
+                  primary: fPrimaryColor,
+                ),
+              ),
+            ],
+          );
+        }
     );
+    return result;
   }
 }

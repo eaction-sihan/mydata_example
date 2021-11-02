@@ -4,37 +4,32 @@ import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 
 class AlertModal {
   String title;
-  String? midleText;
 
   AlertModal({
     required this.title,
-    this.midleText,
   });
 
-  void show() {
-    if (midleText == null) {
-      midleText = "";
-    }
-
-    Get.defaultDialog(
-      title: title,
-      titleStyle: textTheme().headline2,
-      radius: 15.0,
-      middleText: midleText!,
-      actions: [
-        ElevatedButton(
-          onPressed: () {
-            Get.back();
-          },
-          child: Text(
-            "OK",
-            style: TextStyle(color: Colors.white),
-          ),
-          style: ElevatedButton.styleFrom(
-            primary: fPrimaryColor,
-          ),
-        )
-      ],
+  Future<bool?> show(context) async {
+    bool? result = await showDialog(
+        context: context,
+        builder: (_) {
+          return AlertDialog(
+            title: Text(title),
+            actions: [
+              ElevatedButton(
+                onPressed: () => Navigator.pop(context, true), // passing true
+                child: Text(
+                  "OK",
+                  style: TextStyle(color: Colors.white),
+                ),
+                style: ElevatedButton.styleFrom(
+                  primary: fPrimaryColor,
+                ),
+              ),
+            ],
+          );
+        }
     );
+    return result;
   }
 }

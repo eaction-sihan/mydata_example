@@ -6,6 +6,7 @@ import 'package:getx_pattern/app/ui/pages/menu1/tab5/writing/step2.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab5/writing/step3.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:getx_pattern/app/ui/widgets/appbar/app_bar2.dart';
+import 'package:getx_pattern/app/ui/widgets/dialog/confirm.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 /// This is the main application widget.
@@ -155,7 +156,13 @@ class Menu1Tab5Writing extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
                 onPressed: () {
-                  Get.back();
+                  ConfirmModal(
+                    title: '진행하시겠습니까?',
+                  ).show(context).then((exit) {
+                    if (exit!) {
+                      Get.back();
+                    }
+                  }) ;
                 },
 
               )

@@ -14,13 +14,17 @@ class Tab2_1 extends StatelessWidget {
           RaisedButtonWidget(
             icon: Icons.list,
             text: "oi",
-            onPressed: () => ConfirmModal(
-              title: '진행하시겠습니까?',
-              onPressed: () {
-                print('OK');
-                Get.back();
-              },
-            ).show(),
+            onPressed: () {
+              ConfirmModal(
+                title: '진행하시겠습니까?',
+              ).show(context).then((exit) {
+                if (exit!) {
+                  print('OK');
+                } else {
+                  print('Cancel');
+                }
+              }) ;
+            },
             borderColor: Colors.purple,
           ),
           ElevatedButton(

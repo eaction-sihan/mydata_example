@@ -32,9 +32,7 @@ class Menu2Main extends StatelessWidget {
                         leading: Icon(Icons.android_outlined),
                         title: Text('$title'),
                         trailing: Icon(Icons.arrow_forward_outlined),
-                        onTap: () => AlertModal(
-                            title: c.postList[index].title,
-                            midleText: c.postList[index].body).show(),
+                        onTap: () => AlertModal(title: c.postList[index].title).show(context),
                       ),
                     ),
                   );

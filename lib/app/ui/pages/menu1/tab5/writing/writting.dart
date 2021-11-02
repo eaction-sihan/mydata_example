@@ -157,7 +157,7 @@ class Menu1Tab5Writing extends StatelessWidget {
                 ),
                 onPressed: () {
                   ConfirmModal(
-                    title: '진행하시겠습니까?',
+                    title: '저장하시겠습니까?',
                   ).show(context).then((exit) {
                     if (exit!) {
                       Get.back();

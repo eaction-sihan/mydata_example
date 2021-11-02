@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/menu1/menu1_tab5_wrting_controller.dart';
+import 'package:getx_pattern/app/ui/pages/common/multi_select_list.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:getx_pattern/app/ui/widgets/box/select_box.dart';
 import 'package:getx_pattern/app/ui/widgets/icon/circle_icon.dart';
@@ -72,7 +73,17 @@ class Menu1Tab5WritingStep1 extends StatelessWidget {
                 ),
               ]),
             ),
-            SelectBox(title: '국가 선택 (최대 5개국)'),
+            Container(
+              margin: EdgeInsets.symmetric(
+                horizontal: 10,
+              ),
+              child: TextButton(
+                onPressed: () {
+                  Get.to(MultiSelectList());
+                },
+                child: SelectBox(title: '국가 선택 (최대 5개국)'),
+              ),
+            ),
             Container(
               alignment: Alignment.centerLeft,
               padding: EdgeInsets.only(left: 18, top: 25, bottom: 10),

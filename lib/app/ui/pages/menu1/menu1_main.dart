@@ -6,6 +6,7 @@ import 'package:getx_pattern/app/controller/common/main_controller.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab1/tab1.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab2/tab2.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab5/tab5.dart';
+import 'package:getx_pattern/app/ui/theme/app_theme.dart';
 import 'package:getx_pattern/app/ui/widgets/appbar/app_bar1.dart';
 import 'package:getx_pattern/app/ui/widgets/tab/bottom_bar.dart';
 import 'package:getx_pattern/app/ui/widgets/menu/left_menu.dart';
@@ -64,27 +65,28 @@ class Menu1Main extends StatelessWidget {
                   Row(
                     children: [
                       Expanded(
+                          child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child:
+                            Text("Cancel", style: TextStyle(color: Colors.black)),
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white,
+                            ),
+                          )
+                      ),
+                      SizedBox(width: 15),
+                      Expanded(
                         child: ElevatedButton(
                           onPressed: () {
                             exit(0);
                           },
-                          child: Text("Yes"),
+                          child: Text("OK"),
                           style: ElevatedButton.styleFrom(
-                              primary: Colors.blue.shade800),
+                            primary: fPrimaryColor,),
                         ),
                       ),
-                      SizedBox(width: 15),
-                      Expanded(
-                          child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                        child:
-                            Text("No", style: TextStyle(color: Colors.black)),
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.white,
-                        ),
-                      ))
                     ],
                   )
                 ],

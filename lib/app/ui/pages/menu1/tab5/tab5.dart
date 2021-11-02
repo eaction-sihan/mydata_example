@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_pattern/app/controller/menu1/menu1_tab5_wrting_controller.dart';
+import 'package:getx_pattern/app/routes/app_pages.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab5/tab5_1.dart';
 import 'package:getx_pattern/app/ui/pages/menu1/tab5/writing/writting.dart';
 import 'package:getx_pattern/app/ui/theme/app_theme.dart';
@@ -66,7 +67,7 @@ class Tab5 extends StatelessWidget {
                           text: "WRITING",
                           onPressed: () {
                             c.onInit();
-                            Get.to(Menu1Tab5Writing());
+                            Get.toNamed(Routes.MENU1_TAB5_WRITING);
                           }
                         ),
                         SizedBox(width: 10),

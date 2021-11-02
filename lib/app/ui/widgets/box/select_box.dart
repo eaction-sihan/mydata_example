@@ -15,9 +15,6 @@ class SelectBox extends StatelessWidget {
         vertical: 14,
         horizontal: 16,
       ),
-      margin: EdgeInsets.symmetric(
-        horizontal: 16,
-      ),
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(

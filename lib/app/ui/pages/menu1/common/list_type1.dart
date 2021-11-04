@@ -278,18 +278,21 @@ class Menu1ListType1 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Row(children: [
-            IconButton(
-              icon: Icon(FontAwesomeIcons.star),
-              color: fTextColor,
-              iconSize: 16,
+            TextButton.icon(
+              icon: Icon(Icons.push_pin_outlined, size: 20),
+              style: TextButton.styleFrom(primary: fTextColor),
+              label: Text(
+                "pick",
+                style: textTheme().bodyText2,
+              ),
               onPressed: () {
-                print('star button is clicked');
+                print('pick button is clicked');
               },
-            ),
+            )
           ]),
           Row(children: [
             TextButton.icon(
-              icon: Icon(FontAwesomeIcons.comment, size: 16),
+              icon: Icon(Icons.comment_outlined, size: 20),
               style: TextButton.styleFrom(primary: fTextColor),
               label: Text(
                 "${c.postList[index].commentCount}",
@@ -314,18 +317,8 @@ class Menu1ListType1 extends StatelessWidget {
             )
           ]),
           Row(children: [
-            IconButton(
-              icon: Icon(Icons.share_outlined),
-              color: fTextColor,
-              iconSize: 20,
-              onPressed: () {
-                print('share button is clicked');
-              },
-            ),
-          ]),
-          Row(children: [
             TextButton.icon(
-              icon: Icon(FontAwesomeIcons.userCircle, size: 16),
+              icon: Icon(FontAwesomeIcons.smile, size: 16),
               style: TextButton.styleFrom(primary: fTextColor),
               label: Text(
                 "${c.postList[index].authCount}",
@@ -333,6 +326,19 @@ class Menu1ListType1 extends StatelessWidget {
               ),
               onPressed: () {
                 print('user button is clicked');
+              },
+            )
+          ]),
+          Row(children: [
+            TextButton.icon(
+              icon: Icon(Icons.share_outlined, size: 20),
+              style: TextButton.styleFrom(primary: fTextColor),
+              label: Text(
+                "shere",
+                style: textTheme().bodyText2,
+              ),
+              onPressed: () {
+                print('pick button is clicked');
               },
             )
           ]),

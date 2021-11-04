@@ -200,28 +200,20 @@ class Menu1ListType1 extends StatelessWidget {
                     '${c.postList[index].userName}',
                     style: textTheme().subtitle2,
                   ),
-                  Row(children: [
-                    Text(
-                      "following",
-                      style: textTheme().bodyText2!.copyWith(fontSize: 12),
+                  RichText(
+                    text: TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(text: "following ", style: textTheme().bodyText2!.copyWith(fontSize: 12)),
+                        TextSpan(
+                            text: "234",
+                            style: textTheme().bodyText2!.copyWith(fontSize: 12, fontWeight: FontWeight.bold)),
+                        TextSpan(text: " follower ", style: textTheme().bodyText2!.copyWith(fontSize: 12)),
+                        TextSpan(
+                            text: "1234",
+                            style: textTheme().bodyText2!.copyWith(fontSize: 12, fontWeight: FontWeight.bold))
+                      ],
                     ),
-                    SizedBox(width: 3),
-                    Text(
-                      "234",
-                      style: textTheme().bodyText2!.copyWith(fontSize: 12, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(width: 3),
-                    Text(
-                      "follower",
-                      style: textTheme().bodyText2!.copyWith(fontSize: 12),
-                    ),
-                    SizedBox(width: 3),
-                    Text(
-                      "1234",
-                      style: textTheme().bodyText2!.copyWith(fontSize: 12, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(width: 3),
-                  ])
+                  )
                 ]),
                 onPressed: () {
                   print('Writer button is clicked');
@@ -246,17 +238,16 @@ class Menu1ListType1 extends StatelessWidget {
                     size: 20,
                   ),
                 ]),
-                Row(children: [
-                  Text(
-                    "피드백",
-                    style: textTheme().bodyText2!.copyWith(fontSize: 12),
+                RichText(
+                  text: TextSpan(
+                    children: <TextSpan>[
+                      TextSpan(text: '피드백 ', style: textTheme().bodyText2!.copyWith(fontSize: 12)),
+                      TextSpan(
+                          text: '342',
+                          style: textTheme().bodyText2!.copyWith(fontSize: 12, fontWeight: FontWeight.bold))
+                    ],
                   ),
-                  SizedBox(width: 3),
-                  Text(
-                    "342",
-                    style: textTheme().bodyText2!.copyWith(fontSize: 12, fontWeight: FontWeight.bold),
-                  ),
-                ]),
+                )
               ],
             ),
           ),
